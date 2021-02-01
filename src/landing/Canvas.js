@@ -2,11 +2,61 @@ import React, {useRef, useEffect} from 'react'
 
 export const Canvas = (props) => {
   const canvasRef = useRef(null)
+
   useEffect(()=>{
-    const canvas = canvasRef.current
-    const c = canvas.getContext("2d") //c === context
-    c.fillStyle = '#000000'
-    c.fillRect(0,0,c.canvas.width, c.canvas.height)
+    const innerWidth  = window.innerWidth;
+    const innerHeight = window.innerHeight;
+    const canvas      = canvasRef.current  ;
+    const c           = canvas.getContext("2d"); //c === context;
+
+    c.canvas.width  = innerWidth;
+    c.canvas.height = innerHeight;    
+
+    function Dot(x,y, dx, dy, radius){
+      this.x = x;
+      this.y = y;
+      this.dx = dx;
+      this.dy = dy;
+      this.radius = radius;
+      this.draw = function(){
+        c.beginPath();
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);        
+        c.strokeStyle = "black";        
+        c.stroke();
+        c.fill()
+      }
+      this.update = function(){
+        if(this.x + this.radius >innerWidth || this.x - this.radius <0){
+          this.dx = -this.dx;
+        }
+        if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
+          this.dy = -this.dy;
+        }
+        this.x+=this.dx;
+        this.y+=this.dy;
+        this.draw()
+      }
+    }
+    
+    const dotArray = [];    
+    for(let i=0; i<200; i++){
+      let x = Math.random() * innerWidth;
+      let y = Math.random() * innerHeight;
+      let dx = (Math.random() - 0.5) * 2;
+      let dy = (Math.random() - 0.5) * 2;
+      let radius = Math.random() * 2;
+      let dot = new Dot(x, y, dx, dy, radius);
+      dotArray.push(dot)
+    }
+
+    function animate(){
+      requestAnimationFrame(animate)
+      c.clearRect(0,0,innerWidth, innerHeight)      
+      for(let i=0; i<dotArray.length; i++){
+        dotArray[i].update()
+      }
+    }
+    animate()
   },[])
   
   return(    
