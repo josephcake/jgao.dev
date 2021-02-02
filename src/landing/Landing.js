@@ -33,7 +33,7 @@ function Landing ({theme,setTheme}) {
             {theme ? <h3>twilight</h3> : <h3>cookies & cream</h3>}
           </div>
         </div>
-        <div className={theme?`landing__end end__dark`:`landing__end end__light`}>
+        <div className={theme?`landing__end landing__end__dark`:`landing__end landing__end__light`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
