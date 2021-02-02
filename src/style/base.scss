@@ -3,7 +3,18 @@
 @import 'landing.scss';
 @import 'navigation.scss';
 
-
+html,body{
+  height: 100%;
+  width: 100%;
+}
+#root{
+height: 100%;
+  width: 100%;
+}
+.App{
+  height: 100%;
+  width: 100%;
+}
 *{
 
   outline: 0;
@@ -13,8 +24,7 @@
   font-family: sans-serif;
   font-weight: 100;
   letter-spacing: 2px;
-  // height: 100%;
-  // width: 100%;
+  
   
 }
 .wrapper{

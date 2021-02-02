@@ -11,11 +11,17 @@ function Landing ({theme, themes}) {
           <section className={"navigation__section"}>Home</section>
           <section className={"navigation__section"}>Home</section>
         </div> */}
-        <div className={"theme"}>
-          <h3>text goes here</h3>
-        </div>
-        <div className={"about"}>
-          <h3>text goes here</h3>
+        <div className={"landing__section"}>
+          <div className={"theme"}>
+            <h3>theme selection</h3>
+          </div>
+          <div className={"name"}>
+            <h1>Joseph Gao</h1>
+            <h6>SOFTWARE ENGINEER</h6>
+          </div>
+          <div className={"about"}>
+            <h3>about me</h3>
+          </div>
         </div>
       </div>
       <div className={"wrapper"}>
