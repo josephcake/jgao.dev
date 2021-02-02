@@ -1,7 +1,15 @@
 import React, {useRef, useEffect} from 'react'
 
 export const Canvas = (props) => {
-  const canvasRef = useRef(null)
+  const canvasRef = useRef(null)  
+  let dotColor
+  
+  console.log(props)
+  if(props.theme === props.themes[0]){
+    dotColor = "black"
+  }else{
+    dotColor = 'white'
+  }
 
   useEffect(()=>{
     const innerWidth  = window.innerWidth;
@@ -21,9 +29,11 @@ export const Canvas = (props) => {
       this.draw = function(){
         c.beginPath();
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);        
-        c.strokeStyle = "black";        
+        c.strokeStyle = dotColor;
+        // c.fillStyle = dotColor;
+        // c.fill();
         c.stroke();
-        c.fill()
+        
       }
       this.update = function(){
         if(this.x + this.radius >innerWidth || this.x - this.radius <0){
@@ -60,7 +70,7 @@ export const Canvas = (props) => {
   },[])
   
   return(    
-      <canvas id="canvas" ref={canvasRef} {...props}/>      
+      <canvas id="canvas" className={`canvas__`+props.theme} ref={canvasRef} {...props}/>      
   );
 }
 

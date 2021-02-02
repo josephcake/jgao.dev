@@ -1,12 +1,23 @@
 @import 'app.scss';
 @import 'canvas.scss';
+@import 'landing.scss';
+@import 'navigation.scss';
+
+
 *{
 
   outline: 0;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: 100;
+  letter-spacing: 2px;
   // height: 100%;
   // width: 100%;
   
+}
+.wrapper{
+  position: absolute;
+  // z-index: -1;
 }
