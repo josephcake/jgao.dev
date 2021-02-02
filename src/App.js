@@ -4,18 +4,11 @@ import {themes} from './constant/AppConstant';
 import Landing from './landing/Landing';
 
 function App() {
-  const [theme, sTheme] = useState(themes[1])
-  const setTheme = () =>{
-    if(theme === themes[0]){
-      sTheme(themes[1])
-    }else{
-      sTheme(themes[0])
-    }
-  }
+  const [twilightTheme, sTheme] = useState(true)
 
   return (
     <div className="App">
-      <Landing theme={theme} themes={themes}/>
+      <Landing theme={twilightTheme} setTheme={sTheme}/>
     </div>
   );
 }
