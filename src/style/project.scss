@@ -1,4 +1,14 @@
 .project{  
   // background-color:  rgb(33, 33, 33);
-  height: 100vh;
+  &__container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__inner{
+    height: 80%;
+    width: 80%;
+    background-color: rgba(133, 133, 133, 0.063);
+  }
 }

@@ -8,8 +8,10 @@ function App() {
   const [twilightTheme, sTheme] = useState(true)
 
   return (
-    <div className="App">      
+    <div className={twilightTheme?`App__bg_dark App`:`App__bg_light App`}>      
       <Landing theme={twilightTheme} setTheme={sTheme} />
+      <Project />
+      <Project />
       <Project />
     </div>
   );
