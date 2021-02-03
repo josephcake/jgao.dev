@@ -1,14 +1,25 @@
-.project{  
-  // background-color:  rgb(33, 33, 33);
+.project{    
   &__container{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
   &__inner{
     height: 80%;
     width: 80%;
     background-color: rgba(133, 133, 133, 0.063);
+  }
+  &__modal{    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &__title{
+    position: absolute;
+    top: 10px;
   }
 }
