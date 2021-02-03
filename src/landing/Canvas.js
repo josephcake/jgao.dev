@@ -62,7 +62,7 @@ export const Canvas = (props) => {
       }
     }
     animate()
-  },[props.theme])
+  },[props.theme, dotColor])
   
   return(    
       <canvas id="canvas" className={props.theme?`canvas__dark`:`canvas__light`} ref={canvasRef} {...props}/>      

@@ -1,8 +1,18 @@
 .App{
+  position: relative;
   display: flex;
   flex-direction: column;
-  // height: 100%;
-  // width: 100%;
   color: whitesmoke;
   background-color: rgb(29, 29, 29);
+  max-height: 100vh;
+  height:100%;
+  overflow-y: scroll;
+  scroll-snap-type: mandatory; /* for older browsers */
+  scroll-snap-points-y: repeat(100vh); /* for older browsers */
+  scroll-snap-type: y mandatory;
+}
+.section{
+  scroll-snap-align: center;
+  height:100vh;
+  z-index: 1;
 }
