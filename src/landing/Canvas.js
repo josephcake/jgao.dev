@@ -65,7 +65,7 @@ export const Canvas = (props) => {
   },[props.theme, dotColor])
   
   return(    
-      <canvas id="canvas" className={props.theme?`canvas__dark`:`canvas__light`} ref={canvasRef} {...props}/>      
+      <canvas id="canvas" className={props.theme?`bg-dark`:`bg-light`} ref={canvasRef} {...props}/>      
   );
 }
 

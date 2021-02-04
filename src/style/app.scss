@@ -9,12 +9,6 @@
   scroll-snap-type: mandatory; /* for older browsers */
   scroll-snap-points-y: repeat(100vh); /* for older browsers */
   scroll-snap-type: y mandatory;
-  &__bg_dark{
-    background-color: rgb(29, 29, 29);
-  }
-  &__bg_light{
-    background-color: rgb(242, 242, 242);
-  }
 }
 .section{
   position: relative;

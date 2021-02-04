@@ -14,12 +14,14 @@ function App() {
     checkFirst(false)
   }
   return (
-    <div className={twilightTheme ? `App__bg_dark App` : `App__bg_light App`}>
+    <div className={twilightTheme ? `bg-dark App` : `bg-light App`}>
       <Landing theme={twilightTheme} setTheme={sTheme} />
       <Project toggleModal={toggleModal} />
       <Project toggleModal={toggleModal} />
       <Project toggleModal={toggleModal} />
-      <Modal displayModal={displayModal} toggleModal={toggleModal} firstLoad={firstLoad}/>      
+      {firstLoad?null:
+        <Modal theme={twilightTheme} displayModal={displayModal} toggleModal={toggleModal}/>
+      }
     </div>
   );
 }
