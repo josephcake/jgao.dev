@@ -15,8 +15,8 @@ function App() {
   }
   return (
     <div className={twilightTheme ? `bg-dark App` : `bg-light App`}>
-      <Landing theme={twilightTheme} setTheme={sTheme} />
-      <Project toggleModal={toggleModal} />
+      <Landing theme={twilightTheme} setTheme={sTheme} />      
+      <Project toggleModal={toggleModal} first/>      
       <Project toggleModal={toggleModal} />
       <Project toggleModal={toggleModal} />
       {firstLoad?null:

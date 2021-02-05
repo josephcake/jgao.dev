@@ -6,8 +6,8 @@ const WordWrapper = ({theme, str}) => {
   let wordWrapped = strArray.map((s,i)=>{
     return (
       
-        <div className={"title__container"}>
-          <h3 key={i}>{s}</h3>
+        <div key={i} className={"title__container"}>
+          <h3>{s}</h3>
           <p className={`name__char ${bg}`}></p>
         </div>
       

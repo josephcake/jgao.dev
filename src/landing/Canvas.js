@@ -1,9 +1,9 @@
 import React, {useRef, useEffect} from 'react'
 
-export const Canvas = (props) => {
+export const Canvas = ({theme}) => {
   const canvasRef = useRef(null)  
   let dotColor  
-  if(props.theme){
+  if(theme){
     dotColor = 'white'
   }else{
     dotColor = 'black'
@@ -62,10 +62,10 @@ export const Canvas = (props) => {
       }
     }
     animate()
-  },[props.theme, dotColor])
+  },[theme, dotColor])
   
   return(    
-      <canvas id="canvas" className={props.theme?`bg-dark`:`bg-light`} ref={canvasRef} {...props}/>      
+      <canvas id="canvas" className={theme?`bg-dark`:`bg-light`} ref={canvasRef}/>      
   );
 }
 

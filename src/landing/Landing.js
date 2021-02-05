@@ -4,7 +4,10 @@ import {Canvas} from './Canvas';
 import WordWrapper from './WordWrapper'
 
 function Landing ({theme,setTheme}) {
-  
+  const scrollToNext = () =>{     
+    let first = document.getElementById("first")    
+    first.scrollIntoView({behavior: "smooth"})
+  }  
   return (
     <div className={"section"}>
       <div className={"logo"}>
@@ -23,7 +26,7 @@ function Landing ({theme,setTheme}) {
           </div>
           <div className={"centerText"}>
             <h1 className={"centerText__text title"}>
-              <WordWrapper theme={theme} str={"Joseph Gao"}/>
+              <WordWrapper theme={theme} str={"Joseph.Gao"}/>
             </h1>
 
             <h6 className={"centerText__text subtitle"}>SOFTWARE ENGINEER</h6>
@@ -43,6 +46,7 @@ function Landing ({theme,setTheme}) {
               ? `landing__end landing__end__dark`
               : `landing__end landing__end__light`
           }
+          onClick={scrollToNext}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +62,7 @@ function Landing ({theme,setTheme}) {
         </div>
       </div>
       <div className={"wrapper"}>
-        <Canvas theme={theme} />
+        <Canvas theme={theme}/>
       </div>
     </div>
   );
