@@ -4,6 +4,7 @@ import './style/base.scss';
 import Landing from './landing/Landing';
 import Project from './project/Project'
 import Modal from './components/Modal'
+import dtd_1 from './media/dtd/dtd_1.gif'
 
 function App() {
   const [twilightTheme, sTheme] = useState(true)
@@ -16,7 +17,7 @@ function App() {
   return (
     <div className={twilightTheme ? `bg-dark App` : `bg-light App`}>
       <Landing theme={twilightTheme} setTheme={sTheme} />      
-      <Project toggleModal={toggleModal} first/>      
+      <Project hero={dtd_1} toggleModal={toggleModal} first/>      
       <Project toggleModal={toggleModal} />
       <Project toggleModal={toggleModal} />
       {firstLoad?null:
