@@ -1,6 +1,7 @@
 import React from 'react';
 import {Canvas} from './Canvas';
 // import {Canvas} from './Canvas_wave'
+import WordWrapper from './WordWrapper'
 
 function Landing ({theme,setTheme}) {
   
@@ -21,7 +22,10 @@ function Landing ({theme,setTheme}) {
             <h3>about me</h3>
           </div>
           <div className={"centerText"}>
-            <h1 className={"centerText__text title"}>Joseph Gao</h1>
+            <h1 className={"centerText__text title"}>
+              <WordWrapper theme={theme} str={"Joseph Gao"}/>
+            </h1>
+
             <h6 className={"centerText__text subtitle"}>SOFTWARE ENGINEER</h6>
           </div>
           <div
