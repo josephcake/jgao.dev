@@ -10,19 +10,17 @@ function Landing ({theme,setTheme}) {
   }  
   return (
     <div className={"section"}>
-      <div className={"logo"}>
-        <h1>高</h1>
-      </div>
+      
       <div
         className={theme ? `landing__dark landing` : `landing__light landing`}
       >
         <div className={"landing__section"}>
           <div
             className={
-              theme ? `sideText__dark sideText` : `sideText__light sideText`
+              theme ? `sideText__dark sideText about` : `sideText__light sideText about`
             }
           >
-            <h3>about me</h3>
+            {/* <h3>about me</h3> */}
           </div>
           <div className={"centerText"}>
             <h1 className={"centerText__text title"}>

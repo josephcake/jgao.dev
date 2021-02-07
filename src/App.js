@@ -6,6 +6,7 @@ import Project from './project/Project'
 import Modal from './components/Modal'
 import dtd_1 from './media/dtd/dtd_1.gif'
 import dtd_2 from './media/dtd/dtd_2.gif'
+import dtd_hero from './media/dtd/dtd_hero.jpg'
 
 function App() {
   const [twilightTheme, sTheme] = useState(true)
@@ -42,32 +43,37 @@ function App() {
   }
 
   return (
-    <div
-      className={twilightTheme ? `bg-dark App` : `bg-light App`}
-      onScroll={debounce(handleScroll, 200)}
-    >
-      <Landing theme={twilightTheme} setTheme={sTheme} />
-      <Project
-        toggleModal={toggleModal}
-        prjNum={1}
-        inView={inView.project}
-        first
-      />
-      <Project
-        toggleModal={toggleModal}
-        prjNum={2}
-        inView={inView.project} />
-      <Project
-        toggleModal={toggleModal}
-        prjNum={3}
-        inView={inView.project} />
-      {firstLoad ? null : (
-        <Modal
-          theme={twilightTheme}
-          displayModal={displayModal}
+    <div id={"App"}>
+      <div className={twilightTheme ? `bg-dark fixed__sidenav` : `bg-light fixed__sidenav`}>
+        <div className={"logo"}>
+          <h1>高</h1>
+        </div>
+        <div className={"about sideText"}>
+          <h3>J.G</h3>
+        </div>
+      </div>
+      <div
+        className={twilightTheme ? `bg-dark App` : `bg-light App`}
+        onScroll={debounce(handleScroll, 200)}
+      >
+        <Landing theme={twilightTheme} setTheme={sTheme} />
+        <Project
           toggleModal={toggleModal}
+          prjNum={1}
+          inView={inView.project}
+          first
+          hero={dtd_hero}
         />
-      )}
+        <Project toggleModal={toggleModal} prjNum={2} inView={inView.project} />
+        <Project toggleModal={toggleModal} prjNum={3} inView={inView.project} />
+        {firstLoad ? null : (
+          <Modal
+            theme={twilightTheme}
+            displayModal={displayModal}
+            toggleModal={toggleModal}
+          />
+        )}
+      </div>
     </div>
   );
 }

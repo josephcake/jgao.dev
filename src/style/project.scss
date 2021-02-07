@@ -6,13 +6,21 @@
     align-items: center;
     position: relative;
   }
+  &__outer{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
   &__inner{
-    cursor: pointer;
-    height: 80%;
-    width: 80%;
+    cursor: pointer;    
+    height: 100%;
+    width: 100%;
     background-color: rgba(133, 133, 133, 0.063);
-    transition: transform .2s;
-    transform: scale(0.9);    
+    // transition: transform .2s;
+    transform: scale(1);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   } 
   &__title{
     position: absolute;
@@ -20,6 +28,7 @@
     left: 10vw;
   }
   &__hero{    
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;    
   }
 }

@@ -1,3 +1,7 @@
+#App{
+  display: flex;
+  // position: fixed;
+}
 .App{
   position: relative;
   display: flex;
@@ -6,6 +10,7 @@
   max-height: 100vh;
   height:100%;
   overflow-y: scroll;
+  // overflow-x: hidden;
   scroll-snap-type: mandatory; /* for older browsers */
   scroll-snap-points-y: repeat(100vh); /* for older browsers */
   scroll-snap-type: y mandatory;
@@ -15,4 +20,25 @@
   scroll-snap-align: center;
   height:100vh;
   z-index: 1;
+}
+
+.fixed__sidenav{
+  // z-index: 1;
+  // position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+}
+.logo{
+  cursor: pointer;
+  position: fixed;
+  top:0;    
+  font-family: 'Liu Jian Mao Cao', cursive;
+  font-size: 30px;  
+}
+.about{
+  text-align: center;
 }
