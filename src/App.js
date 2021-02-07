@@ -7,7 +7,7 @@ import Project from './project/Project'
 import Modal from './components/Modal'
 import dtd_1 from './media/dtd/dtd_1.gif'
 import dtd_2 from './media/dtd/dtd_2.gif'
-import dtd_hero from './media/dtd/dtd_hero.jpg'
+import dtd_hero from './media/dtd/dtd_hero.gif'
 
 function App() {
   const [twilightTheme, sTheme] = useState(true)

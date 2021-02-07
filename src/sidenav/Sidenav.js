@@ -7,9 +7,9 @@ const Sidenav = ({theme}) =>{
         theme ? `bg-dark fixed__sidenav` : `bg-light fixed__sidenav`
       }
     >
-      <div className={"logo"}>
+      {/* <div className={"logo"}>
         <h1>高</h1>
-      </div>
+      </div> */}
       <div className={"about sideText"}>
         <h3>JG</h3>
       </div>
