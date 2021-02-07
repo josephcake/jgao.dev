@@ -31,7 +31,7 @@ export const Canvas = ({theme}) => {
         c.stroke();        
       }
       this.update = function(){
-        if(this.x + this.radius >innerWidth || this.x - this.radius <0){
+        if(this.x + this.radius >innerWidth || this.x - this.radius < 0){
           this.dx = -this.dx;
         }
         if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
@@ -47,8 +47,8 @@ export const Canvas = ({theme}) => {
     for(let i=0; i<200; i++){
       let x = Math.random() * innerWidth;
       let y = Math.random() * innerHeight;
-      let dx = (Math.random() - 0.5) * 2;
-      let dy = (Math.random() - 0.5) * 2;
+      let dx = (Math.random() - 0.5) * 0.3;
+      let dy = (Math.random() - 0.5) * 0.3;
       let radius = Math.random() * 2;
       let dot = new Dot(x, y, dx, dy, radius);
       dotArray.push(dot)
