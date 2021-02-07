@@ -44,7 +44,7 @@ function App() {
   return (
     <div
       className={twilightTheme ? `bg-dark App` : `bg-light App`}
-      onScroll={debounce(handleScroll, 500)}
+      onScroll={debounce(handleScroll, 200)}
     >
       <Landing theme={twilightTheme} setTheme={sTheme} />
       <Project

@@ -33,7 +33,7 @@ html,body{
 }
 
 .zoomed{
-  transition: transform ease-in-out .2s;
+  transition: transform ease-in-out 1s;
   transform: scale(1);
 
 }

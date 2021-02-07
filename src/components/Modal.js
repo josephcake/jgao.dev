@@ -9,6 +9,7 @@ const Modal = ({theme, displayModal,toggleModal}) => {
       id={"slider"}
       className={`modal ${modalTheme} ${slider}`}
     >
+      <div className={`modal__content ${contentTheme}`}>"Some Image"</div>
       <div
         className={
           theme
@@ -19,7 +20,6 @@ const Modal = ({theme, displayModal,toggleModal}) => {
       >
         CLOSE
       </div>
-      <div className={`modal__content ${contentTheme}`}>"Some Image"</div>
     </div>
   );
 };
