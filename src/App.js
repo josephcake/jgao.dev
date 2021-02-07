@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './style/base.scss';
 // import {themes} from './constant/AppConstant';
+import Sidenav from './sidenav/Sidenav'
 import Landing from './landing/Landing';
 import Project from './project/Project'
 import Modal from './components/Modal'
@@ -44,14 +45,7 @@ function App() {
 
   return (
     <div id={"App"}>
-      <div className={twilightTheme ? `bg-dark fixed__sidenav` : `bg-light fixed__sidenav`}>
-        <div className={"logo"}>
-          <h1>高</h1>
-        </div>
-        <div className={"about sideText"}>
-          <h3>J.G</h3>
-        </div>
-      </div>
+      <Sidenav theme={twilightTheme}/>
       <div
         className={twilightTheme ? `bg-dark App` : `bg-light App`}
         onScroll={debounce(handleScroll, 200)}
