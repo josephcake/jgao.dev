@@ -31,3 +31,9 @@ html,body{
   bottom:100%;
   z-index: -1;
 }
+
+.zoomed{
+  transition: transform ease-in-out .2s;
+  transform: scale(1);
+
+}
