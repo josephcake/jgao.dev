@@ -10,13 +10,30 @@ import dtd_2 from './media/dtd/dtd_2.gif'
 function App() {
   const [twilightTheme, sTheme] = useState(true)
   const [displayModal, tModal] = useState(false)
-  const [firstLoad, checkFirst] = useState(true);
+  const [firstLoad, checkFirst] = useState(true)
+  const [pageHeight, sPageHeight] = useState(0)
+
+  const debounce = (fn, delay) => {
+    let timeoutID;
+    return function (...args) {
+      if(timeoutID){
+        clearTimeout(timeoutID)
+      }
+      timeoutID = setTimeout(()=>{
+        fn(...args)
+      }, delay)
+    }
+  }
   const toggleModal=()=>{
     tModal(!displayModal)
     checkFirst(false)
   }
+  const handleScroll=(e)=>{
+    console.log(e.target.scrollTop)
+    // console.log(e.target.scrollHeight)  overall scrollable height
+  }
   return (
-    <div className={twilightTheme ? `bg-dark App` : `bg-light App`}>
+    <div className={twilightTheme ? `bg-dark App` : `bg-light App`} onScroll={debounce(handleScroll,500)}>
       <Landing theme={twilightTheme} setTheme={sTheme} />      
       <Project toggleModal={toggleModal} first/>      
       <Project toggleModal={toggleModal} />
