@@ -56,6 +56,7 @@ function App() {
           prjNum={1}
           inView={inView.project}
           first
+          theme={twilightTheme}
           hero={dtd_hero}
         />
         <Project toggleModal={toggleModal} prjNum={2} inView={inView.project} />
