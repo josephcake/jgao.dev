@@ -15,14 +15,13 @@
     cursor: pointer;    
     height: 100%;
     width: 100%;
-    background-color: rgba(133, 133, 133, 0.063);
-    // transition: transform .2s;
+    background-color: rgba(133, 133, 133, 0.063);    
+    transition: transform ease-in-out 1s;
     transform: scale(1);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
-    
-    filter: grayscale(40%);
+    background-repeat: no-repeat;    
+    // filter: grayscale(40%);
     &_info{      
       width: 500px;
       font-size: 50px;
@@ -52,5 +51,6 @@
 }
 
 .invert{
-  filter:invert(1) grayscale(40%);
+  // fill-rule: evenodd;
+  // filter:sepia(2);
 }
