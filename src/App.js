@@ -7,8 +7,8 @@ import Project from './project/Project'
 import Modal from './components/Modal'
 import dtd_hero_light from './media/dtd/dtd_hero_light.gif'
 import dtd_hero_dark from './media/dtd/dtd_hero_dark.gif'
-import m_hero_light from './media/mewgrounds/m_hero_light.gif'
-import m_hero_dark from './media/mewgrounds/m_hero_dark.gif'
+import m_hero_light from './media/mewgrounds/m5_hero_light.gif'
+import m_hero_dark from './media/mewgrounds/m5_hero_dark.gif'
 
 function App() {
   const [twilightTheme, sTheme] = useState(false)
@@ -46,10 +46,14 @@ function App() {
 
   return (
     <div id={"App"}>
-      <Sidenav theme={twilightTheme} setTheme={sTheme}/>
+      <Sidenav
+        theme={twilightTheme}
+        setTheme={sTheme}        
+        inView={inView.project}
+      />
       <div
         className={twilightTheme ? `bg-dark App` : `bg-light App`}
-        onScroll={debounce(handleScroll, 200)}
+        onScroll={debounce(handleScroll, 100)}
       >
         <Landing theme={twilightTheme} setTheme={sTheme} />
         <Project
