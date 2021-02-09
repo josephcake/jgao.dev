@@ -5,13 +5,13 @@ import Sidenav from './sidenav/Sidenav'
 import Landing from './landing/Landing';
 import Project from './project/Project'
 import Modal from './components/Modal'
-import dtd_1 from './media/dtd/dtd_1.gif'
-import dtd_2 from './media/dtd/dtd_2.gif'
 import dtd_hero_light from './media/dtd/dtd_hero_light.gif'
 import dtd_hero_dark from './media/dtd/dtd_hero_dark.gif'
+import m_hero_light from './media/mewgrounds/m_hero_light.gif'
+import m_hero_dark from './media/mewgrounds/m_hero_dark.gif'
 
 function App() {
-  const [twilightTheme, sTheme] = useState(true)
+  const [twilightTheme, sTheme] = useState(false)
   const [displayModal, tModal]  = useState(false)
   const [firstLoad, checkFirst] = useState(true)
   const [inView, sInView]       = useState({top:0, project:0})
@@ -46,7 +46,7 @@ function App() {
 
   return (
     <div id={"App"}>
-      <Sidenav theme={twilightTheme}/>
+      <Sidenav theme={twilightTheme} />
       <div
         className={twilightTheme ? `bg-dark App` : `bg-light App`}
         onScroll={debounce(handleScroll, 200)}
@@ -61,7 +61,14 @@ function App() {
           heroLight={dtd_hero_light}
           heroDark={dtd_hero_dark}
         />
-        <Project toggleModal={toggleModal} prjNum={2} inView={inView.project} />
+        <Project
+          toggleModal={toggleModal}
+          prjNum={2}
+          inView={inView.project}
+          theme={twilightTheme}
+          heroLight={m_hero_light}
+          heroDark={m_hero_dark}
+        />
         <Project toggleModal={toggleModal} prjNum={3} inView={inView.project} />
         {firstLoad ? null : (
           <Modal
