@@ -1,0 +1,32 @@
+
+.fixed__sidenav{
+  z-index: 999999;
+  // position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  cursor: pointer;
+  position: fixed;
+  top:0;    
+  font-family: 'Liu Jian Mao Cao', cursive;
+  font-size: 30px;  
+}
+.about{
+  text-align: center;
+  font-family: 'Major Mono Display', monospace;
+}
+
+.sideText {  
+  cursor: pointer;  
+  font-size: 1vmax;
+  writing-mode:vertical-lr;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+  margin: 5px 20px;
+}
+// .sidenav__item{
+//   color: rgba(19, 19, 19, 0.7);  
+// }

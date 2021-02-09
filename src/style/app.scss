@@ -21,25 +21,3 @@
   height:100vh;
   z-index: 1;
 }
-
-.fixed__sidenav{
-  z-index: 999999;
-  // position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-
-}
-.logo{
-  cursor: pointer;
-  position: fixed;
-  top:0;    
-  font-family: 'Liu Jian Mao Cao', cursive;
-  font-size: 30px;  
-}
-.about{
-  text-align: center;
-  font-family: 'Major Mono Display', monospace;
-}

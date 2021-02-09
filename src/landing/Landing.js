@@ -15,13 +15,7 @@ function Landing ({theme,setTheme}) {
         className={theme ? `landing__dark landing` : `landing__light landing`}
       >
         <div className={"landing__section"}>
-          <div
-            className={
-              theme ? `sideText__dark sideText about` : `sideText__light sideText about`
-            }
-          >
-            {/* <h3>about me</h3> */}
-          </div>
+          {/* <div></div> */}
           <div className={"centerText"}>
             <h1 className={"centerText__text title"}>
               <WordWrapper theme={theme} str={"Joseph.Gao"}/>
@@ -29,14 +23,8 @@ function Landing ({theme,setTheme}) {
 
             <h6 className={"centerText__text subtitle"}>SOFTWARE ENGINEER</h6>
           </div>
-          <div
-            className={
-              theme ? `sideText__dark sideText` : `sideText__light sideText`
-            }
-            onClick={() => setTheme(!theme)}
-          >
-            {theme ? <h3>twilight</h3> : <h3>cookies & cream</h3>}
-          </div>
+          {/* <div></div> */}
+          
         </div>
         <div
           className={

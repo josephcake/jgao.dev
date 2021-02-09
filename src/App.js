@@ -46,7 +46,7 @@ function App() {
 
   return (
     <div id={"App"}>
-      <Sidenav theme={twilightTheme} />
+      <Sidenav theme={twilightTheme} setTheme={sTheme}/>
       <div
         className={twilightTheme ? `bg-dark App` : `bg-light App`}
         onScroll={debounce(handleScroll, 200)}
@@ -60,6 +60,8 @@ function App() {
           theme={twilightTheme}
           heroLight={dtd_hero_light}
           heroDark={dtd_hero_dark}
+          subtitle={"Algo Visualizer"}
+          title={"Destroy The Duck"}
         />
         <Project
           toggleModal={toggleModal}
@@ -68,6 +70,8 @@ function App() {
           theme={twilightTheme}
           heroLight={m_hero_light}
           heroDark={m_hero_dark}
+          subtitle={"Pokemon Database"}
+          title={"Mewgrounds"}
         />
         <Project toggleModal={toggleModal} prjNum={3} inView={inView.project} />
         {firstLoad ? null : (

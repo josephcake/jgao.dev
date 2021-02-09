@@ -1,6 +1,16 @@
 import React from 'react';
 
-const Project = ({toggleModal, first, heroLight, heroDark, prjNum, inView, theme}) =>{
+const Project = ({
+    toggleModal, 
+    first, 
+    heroLight, 
+    heroDark, 
+    prjNum, 
+    inView, 
+    theme, 
+    subtitle, 
+    title
+  }) =>{
   const zoomed = prjNum === inView ? "zoomed" : ""  
   const invert = theme ? "invert" : ""
   const hero = theme ? heroDark : heroLight
@@ -16,8 +26,8 @@ const Project = ({toggleModal, first, heroLight, heroDark, prjNum, inView, theme
         </div>
       </div>
       <div className={`project__inner_info`}>
-        <h6>Algo Visualizer</h6>
-        <h1>Destroy The Duck</h1>
+        <h6>{subtitle}</h6>
+        <h1>{title}</h1>
       </div>
     </div>
   );
