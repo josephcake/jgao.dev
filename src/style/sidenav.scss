@@ -6,9 +6,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  flex-grow: 1;
+  // flex-grow: 1;
   position: relative;
-  // width: 70px;
+  width: 70px;
 }
 // .logo{
 //   cursor: pointer;
@@ -29,7 +29,7 @@
   writing-mode:vertical-lr;
   text-orientation: sideways;
   transform: rotate(180deg);
-  margin: 5px 20px;
+  margin: 5px 0;
 }
 
 .scroll__indi__container{  

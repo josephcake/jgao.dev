@@ -2,7 +2,7 @@ import React from 'react'
 
 const Sidenav = ({theme, setTheme, inView}) =>{
   const navItemColor = theme?"bg-light":"bg-dark"
-  const projects = [1,2,3]
+  const projects = [0,1,2,3]
   const navItems = projects.map(p=>{
     if(p === inView){
       return <div className={`nav__scroll_indi grow ${navItemColor}`}></div>;
@@ -18,7 +18,7 @@ const Sidenav = ({theme, setTheme, inView}) =>{
       <div className={"about sideText sidenav__item"}>
         <h3>JG</h3>
       </div>
-      <div className={"sidenav__item scroll__indi__container"}>
+      <div className={"sidenav__item scroll__indi__container"}>        
         {navItems}
       </div>
 
@@ -26,7 +26,7 @@ const Sidenav = ({theme, setTheme, inView}) =>{
         className={
           theme
             ? `sideText__dark sideText sidenav__item`
-            : `sideText__light sideText sidenav__item` 
+            : `sideText__light sideText sidenav__item`
         }
         onClick={() => setTheme(!theme)}
       >

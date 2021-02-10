@@ -37,6 +37,14 @@
         font-size: 20px;
         color: gray;
       }
+    }
+    &_view{      
+      font-size: 30px;      
+      position: absolute;
+      right: 5vw;
+      bottom: 2vh;
+      // width: 100%;
+      fill:rgba(165, 165, 165, 0.4);
     }    
   } 
   &__title{
