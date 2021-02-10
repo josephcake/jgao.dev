@@ -11,8 +11,7 @@
     width: 100%;
     overflow: hidden;
   }
-  &__inner{
-    cursor: pointer;    
+  &__inner{    
     height: 100%;
     width: 100%;
     background-color: rgba(133, 133, 133, 0.063);    
@@ -22,30 +21,7 @@
     background-size: cover;
     background-repeat: no-repeat;    
     // filter: grayscale(40%);
-    &_info{      
-      width: 500px;
-      font-size: 50px;
-      // color: black;
-      // text-shadow: 0 0 1px black;
-      position: absolute;
-      bottom: 5vh;
-      left: 5vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      & h6{
-        font-size: 20px;
-        color: gray;
-      }
-    }
-    &_view{      
-      font-size: 30px;      
-      position: absolute;
-      right: 5vw;
-      bottom: 2vh;
-      // width: 100%;
-      fill:rgba(165, 165, 165, 0.4);
-    }    
+       
   } 
   &__title{
     position: absolute;
@@ -58,7 +34,33 @@
   }
 }
 
-.invert{
-  // fill-rule: evenodd;
-  // filter:sepia(2);
+.project_overlay_container{
+  position: absolute;  
+  bottom: 2vh;  
+  width: 100%;  
+  display: flex;  
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 50px;
+  color: gray;
+  padding: 20px;
+}
+.modal_arrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill:black;
+  height: 70px;
+  width: 70px;  
+  border-radius: 50%; 
+  // text-orientation: sideways;
+  // transform: rotate(270deg) scale(1);
+  background-color: rgba(182, 182, 182, 0.616);
+  animation: grow 2s infinite;
+}
+
+@keyframes grow{
+  0% {transform: rotate(270deg) scale(0.7); background-color: rgba(200, 200, 200, 0.616);}
+  50% {transform: rotate(270deg) scale(1); background-color: rgba(135, 135, 135, 0.878);}
+  100% {transform: rotate(270deg) scale(0.7); background-color: rgba(200, 200, 200, 0.616);}
 }
