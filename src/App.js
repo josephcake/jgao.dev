@@ -48,7 +48,7 @@ function App() {
     <div id={"App"}>
       <Sidenav
         theme={twilightTheme}
-        setTheme={sTheme}        
+        setTheme={sTheme}
         inView={inView.project}
       />
       <div
@@ -58,6 +58,7 @@ function App() {
         <Landing theme={twilightTheme} setTheme={sTheme} />
         <Project
           toggleModal={toggleModal}
+          displayModal={displayModal}
           prjNum={1}
           inView={inView.project}
           first
@@ -69,6 +70,7 @@ function App() {
         />
         <Project
           toggleModal={toggleModal}
+          displayModal={displayModal}
           prjNum={2}
           inView={inView.project}
           theme={twilightTheme}
@@ -77,7 +79,12 @@ function App() {
           subtitle={"Pokemon Database"}
           title={"Mewgrounds"}
         />
-        <Project toggleModal={toggleModal} prjNum={3} inView={inView.project} />
+        <Project
+          toggleModal={toggleModal}
+          displayModal={displayModal}
+          prjNum={3}
+          inView={inView.project}
+        />
         {firstLoad ? null : (
           <Modal
             theme={twilightTheme}

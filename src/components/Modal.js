@@ -10,7 +10,7 @@ const Modal = ({theme, displayModal,toggleModal}) => {
       className={`modal ${modalTheme} ${slider}`}
     >
       <div className={`modal__content ${contentTheme}`}>"Some Image"</div>
-      <div
+      {/* <div
         className={
           theme
             ? "modal__close bg-dark"
@@ -19,7 +19,7 @@ const Modal = ({theme, displayModal,toggleModal}) => {
         onClick={toggleModal}
       >
         CLOSE
-      </div>
+      </div> */}
     </div>
   );
 };

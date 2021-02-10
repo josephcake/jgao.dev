@@ -20,18 +20,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;    
-    // filter: grayscale(40%);
-       
-  } 
-  &__title{
-    position: absolute;
-    top: 10px;
-    left: 10vw;
-  }
-  &__hero{    
-    object-fit: contain;
-    object-position: center;    
-  }
+  }   
 }
 
 .project_overlay_container{
@@ -46,21 +35,34 @@
   padding: 20px;
 }
 .modal_arrow{
+  position: relative;
+  z-index: 999999;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   fill:black;
   height: 70px;
   width: 70px;  
-  border-radius: 50%; 
-  // text-orientation: sideways;
-  // transform: rotate(270deg) scale(1);
+  border-radius: 50%;   
   background-color: rgba(182, 182, 182, 0.616);
-  animation: grow 2s infinite;
+  &__left{
+    animation: grow_left 2s infinite;
+  }
+  &__right{
+    animation: grow_right 2s infinite;
+  }
 }
 
-@keyframes grow{
+@keyframes grow_right{
   0% {transform: rotate(270deg) scale(0.7); background-color: rgba(200, 200, 200, 0.616);}
   50% {transform: rotate(270deg) scale(1); background-color: rgba(135, 135, 135, 0.878);}
   100% {transform: rotate(270deg) scale(0.7); background-color: rgba(200, 200, 200, 0.616);}
+}
+
+
+@keyframes grow_left{
+  0% {transform: rotate(90deg) scale(0.7); background-color: rgba(200, 200, 200, 0.616);}
+  50% {transform: rotate(90deg) scale(1); background-color: rgba(135, 135, 135, 0.878);}
+  100% {transform: rotate(90deg) scale(0.7); background-color: rgba(200, 200, 200, 0.616);}
 }
