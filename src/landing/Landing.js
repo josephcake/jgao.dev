@@ -27,11 +27,7 @@ function Landing ({theme,setTheme}) {
           
         </div>
         <div
-          className={
-            theme
-              ? `landing__end landing__end__dark`
-              : `landing__end landing__end__light`
-          }
+          className={`landing__end `}
           onClick={scrollToNext}
         >
           <svg
