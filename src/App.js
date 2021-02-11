@@ -1,4 +1,4 @@
-import React, {useState, memo} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import './style/base.scss';
 // import {themes} from './constant/AppConstant';
 import Sidenav from './sidenav/Sidenav'
@@ -11,6 +11,7 @@ import m_hero_light from './media/mewgrounds/m5_hero_light.gif'
 import m_hero_dark from './media/mewgrounds/m5_hero_dark.gif'
 
 function App() {
+  const appRef = useRef(null)
   const [twilightTheme, sTheme] = useState(false)
   const [displayModal, tModal]  = useState(false)
   const [firstLoad, checkFirst] = useState(true)
@@ -18,6 +19,14 @@ function App() {
 
   const [scrollTop, sScrollTop] = useState(0)
 
+  const [scrollHeight, sScrollHeight] = useState(0)
+
+  useEffect(()=>{ //setting the scrollHeight once
+    const app = appRef.current
+    const height = app.scrollHeight
+    sScrollHeight(height)
+    console.log('app:',height)
+  },[])
   
 
   const debounce = (fn, delay) => {
@@ -37,7 +46,7 @@ function App() {
     checkFirst(false)
   }
   const handleScroll=(e)=>{
-    console.log(e.target.scrollTop)
+    // console.log(e.target.scrollTop)
     sScrollTop(e.target.scrollTop);
 
     // let scrollTop = e.target.scrollTop    
@@ -57,10 +66,12 @@ function App() {
       <Sidenav
         theme={twilightTheme}
         setTheme={sTheme}
-        inView={inView.project}
+        scrollTop={scrollTop}
+        scrollHeight={scrollHeight}
       />
       <div
         className={twilightTheme ? `bg-dark App` : `bg-light App`}
+        ref={appRef}
         onScroll={handleScroll}
       >
         <Landing theme={twilightTheme} setTheme={sTheme} />

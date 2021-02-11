@@ -1,7 +1,8 @@
 import React from 'react'
 
-const ProgressBar = () => {
-  console.log('haha')
+const ProgressBar = ({scrollTop}) => {
+  // console.log('haha')
+  console.log(scrollTop)
   return <div className={"progress-bar"}></div>;
 }
 

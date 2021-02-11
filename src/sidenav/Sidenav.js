@@ -1,8 +1,9 @@
 import React from 'react'
 import ProgressBar from './ProgressBar'
+import InnerSidenav from './InnerSidenav'
 
-const Sidenav = ({theme, setTheme}) =>{
-  
+const Sidenav = ({theme, setTheme, scrollTop, scrollHeight}) =>{
+  // console.log(scrollHeight)
   return (
     <div
       className={
@@ -11,30 +12,9 @@ const Sidenav = ({theme, setTheme}) =>{
           : `bg-light fixed__sidenav__container`
       }
     >
-      <ProgressBar/>
-      <div
-        className={`fixed__sidenav`}
-      >
-        <div className={"about sideText sidenav__item"}>
-          {" "}
-          <h3></h3>{" "}
-        </div>
-
-        <div className={"about sideText sidenav__item"}>
-          <h3>JG</h3>
-        </div>
-
-        <div
-          className={
-            theme
-              ? `sideText__dark sideText sidenav__item`
-              : `sideText__light sideText sidenav__item`
-          }
-          onClick={() => setTheme(!theme)}
-        >
-          {theme ? <h3>twilight</h3> : <h3>creamy</h3>}
-        </div>
-      </div>
+      <ProgressBar scrollTop={scrollTop}/>
+      <InnerSidenav theme={theme} setTheme={setTheme}/>
+      
     </div>
   );
 }
