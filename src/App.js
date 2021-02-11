@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, memo} from 'react';
 import './style/base.scss';
 // import {themes} from './constant/AppConstant';
 import Sidenav from './sidenav/Sidenav'
@@ -15,6 +15,9 @@ function App() {
   const [displayModal, tModal]  = useState(false)
   const [firstLoad, checkFirst] = useState(true)
   const [inView, sInView]       = useState({top:0, project:0})
+
+  const [scrollTop, sScrollTop] = useState(0)
+
   
 
   const debounce = (fn, delay) => {
@@ -27,33 +30,27 @@ function App() {
         fn(...args)
       }, delay)
     }
-  }
+  } //debounce(fn,s)
+
   const toggleModal=()=>{
     tModal(!displayModal)
     checkFirst(false)
   }
   const handleScroll=(e)=>{
     console.log(e.target.scrollTop)
+    sScrollTop(e.target.scrollTop);
 
-    let scrollTop = e.target.scrollTop    
-    let sectionHeight = e.target.scrollHeight/4
-    let prevState = {...inView};
-    if(scrollTop !== inView.top){      
-      prevState.project = scrollTop/sectionHeight
-      prevState.top = scrollTop      
-    }
-    sInView(prevState)    
+    // let scrollTop = e.target.scrollTop    
+    // let sectionHeight = e.target.scrollHeight/4
+    // let prevState = {...inView};
+    // if(scrollTop !== inView.top){      
+    //   prevState.project = scrollTop/sectionHeight
+    //   prevState.top = scrollTop      
+    // }
+
+    // sInView(prevState)    setting the current project view (if snap scroll is on)
   }
 
-  // const navItemColor = twilightTheme ? "bg-light" : "bg-dark";
-  // const projects = [1, 2, 3];
-  // const navItems = projects.map((p) => {
-  //   if (p === inView.project) {
-  //     return <div className={`nav__scroll_indi grow ${navItemColor}`}></div>;
-  //   } else {
-  //     return <div className={`nav__scroll_indi ${navItemColor}`}></div>;
-  //   }
-  // });
 
   return (
     <div id={"App"}>
@@ -64,7 +61,7 @@ function App() {
       />
       <div
         className={twilightTheme ? `bg-dark App` : `bg-light App`}
-        onScroll={debounce(handleScroll, 100)}
+        onScroll={handleScroll}
       >
         <Landing theme={twilightTheme} setTheme={sTheme} />
         <div className={"projects"}>
@@ -72,7 +69,7 @@ function App() {
             toggleModal={toggleModal}
             displayModal={displayModal}
             prjNum={1}
-            inView={inView.project}
+            // inView={inView.project}
             first
             theme={twilightTheme}
             heroLight={dtd_hero_light}
@@ -84,7 +81,7 @@ function App() {
             toggleModal={toggleModal}
             displayModal={displayModal}
             prjNum={2}
-            inView={inView.project}
+            // inView={inView.project}
             theme={twilightTheme}
             heroLight={m_hero_light}
             heroDark={m_hero_dark}
@@ -95,7 +92,7 @@ function App() {
             toggleModal={toggleModal}
             displayModal={displayModal}
             prjNum={3}
-            inView={inView.project}
+            // inView={inView.project}
           />
           {firstLoad ? null : (
             <Modal

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {memo} from 'react';
 
-const Project = ({
+function Project({
     toggleModal, 
     displayModal,
     first, 
@@ -11,10 +11,12 @@ const Project = ({
     theme, 
     subtitle, 
     title
-  }) =>{
-  const zoomed = prjNum === inView ? "zoomed" : ""    
+  }) {
+    console.log('project')
+  const zoomed = prjNum === inView ? "zoomed" : ""
   const hero = theme ? heroDark : heroLight
   const direction = displayModal ? "__left" : "__right"
+
   return (
     <div id={`${first ? "first" : null}`} className={`section`}>
       <div className={"project__container"}>
@@ -51,4 +53,11 @@ const Project = ({
   );
 }
 
-export default Project
+function compare (prevProp, nextProp){
+  if(prevProp.displayModal != nextProp.displayModal){
+    console.log(prevProp.displayModal, nextProp.displayModal)
+    return false
+  }
+  return true
+}
+export default memo(Project, compare)

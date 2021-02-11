@@ -1,4 +1,5 @@
 import React from 'react'
+import ProgressBar from './ProgressBar'
 
 const Sidenav = ({theme, setTheme}) =>{
   
@@ -10,7 +11,7 @@ const Sidenav = ({theme, setTheme}) =>{
           : `bg-light fixed__sidenav__container`
       }
     >
-      <div className={"progress-bar"}></div>
+      <ProgressBar/>
       <div
         className={`fixed__sidenav`}
       >

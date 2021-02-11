@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {Canvas} from './Canvas';
 // import {Canvas} from './Canvas_wave'
 import WordWrapper from './WordWrapper'
 
-function Landing ({theme,setTheme}) {
+const Landing = memo(function Landing ({theme,setTheme}) {
   const scrollToNext = () =>{     
     let first = document.getElementById("first")    
     first.scrollIntoView({behavior: "smooth"})
-  }  
+  }
+  // console.log('landing page') 
   return (
     <div className={"section main_land"}>
       
@@ -48,5 +49,5 @@ function Landing ({theme,setTheme}) {
       </div>
     </div>
   );
-}
+})
 export default Landing
