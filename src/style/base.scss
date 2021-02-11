@@ -35,5 +35,7 @@ html,body{
 .zoomed{
   // transition: transform ease-in-out 1s;
   transform: scale(1.04);
-
+}
+.hidden{
+  display: none;
 }

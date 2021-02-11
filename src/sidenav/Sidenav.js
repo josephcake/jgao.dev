@@ -1,26 +1,16 @@
 import React from 'react'
 
-const Sidenav = ({theme, setTheme, inView}) =>{
-  const navItemColor = theme?"bg-light":"bg-dark"
-  const projects = [0,1,2,3]
-  const navItems = projects.map(p=>{
-    if(p === inView){
-      return <div className={`nav__scroll_indi grow ${navItemColor}`}></div>;
-    }else{
-      return <div className={`nav__scroll_indi ${navItemColor}`}></div>;
-    }
-    
-  })
+const Sidenav = ({theme, setTheme}) =>{
+  
   return (
     <div
       className={theme ? `bg-dark fixed__sidenav` : `bg-light fixed__sidenav`}
     >
+      <div className={"about sideText sidenav__item"}></div>
       <div className={"about sideText sidenav__item"}>
         <h3>JG</h3>
       </div>
-      <div className={"sidenav__item scroll__indi__container"}>        
-        {navItems}
-      </div>
+      
 
       <div
         className={

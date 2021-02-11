@@ -10,13 +10,7 @@
   position: relative;
   width: 70px;
 }
-// .logo{
-//   cursor: pointer;
-//   position: fixed;
-//   top:0;    
-//   font-family: 'Liu Jian Mao Cao', cursive;
-//   font-size: 30px;  
-// }
+
 .about{  
   text-align: center;
   font-family: 'Major Mono Display', monospace;
@@ -32,24 +26,7 @@
   margin: 5px 0;
 }
 
-.scroll__indi__container{  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 45%;
-}
 
-.nav__scroll_indi{
-  height: 4px;  
-  width: 20%;
-  margin: 7px 0;
-  transition: width 0.3s ease-in-out;  
-}
-.grow{
-  width: 80%;
-}
 .sidenav__item{
   display: flex;
   justify-content: center;

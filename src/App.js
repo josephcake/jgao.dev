@@ -33,7 +33,8 @@ function App() {
     checkFirst(false)
   }
   const handleScroll=(e)=>{
-    // console.log(e.target.scrollTop)
+    console.log(e.target.scrollTop)
+
     let scrollTop = e.target.scrollTop    
     let sectionHeight = e.target.scrollHeight/4
     let prevState = {...inView};
@@ -43,6 +44,16 @@ function App() {
     }
     sInView(prevState)    
   }
+
+  const navItemColor = twilightTheme ? "bg-light" : "bg-dark";
+  const projects = [1, 2, 3];
+  const navItems = projects.map((p) => {
+    if (p === inView.project) {
+      return <div className={`nav__scroll_indi grow ${navItemColor}`}></div>;
+    } else {
+      return <div className={`nav__scroll_indi ${navItemColor}`}></div>;
+    }
+  });
 
   return (
     <div id={"App"}>
@@ -93,6 +104,7 @@ function App() {
           />
         )}
       </div>
+      <div className={inView.project>0 ? `scroll__indi__container` : 'hidden'}>{navItems}</div>
     </div>
   );
 }
