@@ -53,7 +53,10 @@ function Project({
   );
 }
 
-function compare (prevProp, nextProp){
+function compare (prevProp, nextProp){  
+  if(prevProp.theme != nextProp.theme){
+    return false
+  }
   if(prevProp.displayModal != nextProp.displayModal){
     console.log(prevProp.displayModal, nextProp.displayModal)
     return false

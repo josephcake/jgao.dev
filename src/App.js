@@ -27,7 +27,7 @@ function App() {
     height = height - (height/4)
     sScrollHeight(height)
     console.log('app:',height)
-  },[])
+  },[twilightTheme])
   
 
   const debounce = (fn, delay) => {
