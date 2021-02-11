@@ -38,7 +38,7 @@
   padding: 20px;
 }
 .modal_arrow{
-  position: relative;
+  position: relative;  
   z-index: 999999;
   cursor: pointer;
   display: flex;
@@ -50,6 +50,9 @@
   border-radius: 50%;   
   background-color: rgba(182, 182, 182, 0.616);
   &__left{
+    position: fixed;
+    left: 3vw;
+    top: 3vh;
     animation: grow_left 2s infinite;
   }
   &__right{

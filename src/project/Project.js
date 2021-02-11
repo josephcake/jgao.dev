@@ -32,6 +32,7 @@ function Project({
           <h6>{subtitle}</h6>
           <h1>{title}</h1>
         </div>
+        <div></div>
         <div
           className={`modal_arrow${direction} modal_arrow`}
           onClick={toggleModal}

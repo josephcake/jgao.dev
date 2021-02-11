@@ -20,6 +20,8 @@ function App() {
   const [scrollTop, sScrollTop] = useState(0)
 
   const [scrollHeight, sScrollHeight] = useState(0)
+  const direction = displayModal ? "__left" : "__right";
+
 
   useEffect(()=>{ //setting the scrollHeight once
     const app = appRef.current
@@ -106,6 +108,7 @@ function App() {
             prjNum={3}
             // inView={inView.project}
           />
+        
           {firstLoad ? null : (
             <Modal
               theme={twilightTheme}
