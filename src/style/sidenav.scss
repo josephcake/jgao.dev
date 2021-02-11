@@ -1,6 +1,5 @@
 
 .fixed__sidenav{
-  z-index: 999999;
   // position: fixed;
   display: flex;
   flex-direction: column;
@@ -9,6 +8,19 @@
   // flex-grow: 1;
   position: relative;
   width: 50px;
+  height: 100vh;
+  &__container{
+  z-index: 999999;
+    display: flex;
+  }
+}
+.progress-bar{
+  // position: relative;
+  // right: 0;
+  // top:0;
+  // background-color: black;
+  width: 10px;
+  height:100vh;
 }
 
 .about{  

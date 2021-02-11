@@ -3,7 +3,7 @@
   // position: fixed;
 }
 .App{
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   color: whitesmoke;  
@@ -22,9 +22,7 @@
   // scroll-snap-stop: always;
   // z-index: 1;
 }
-.progress-bar{
-  
-}
+
 
 // .scroll__indi__container{  
 //   display: flex;

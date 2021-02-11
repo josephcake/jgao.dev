@@ -1,4 +1,5 @@
 .project{    
+  position: absolute;
   &__container{
     height: 100%;
     display: flex;
@@ -23,13 +24,15 @@
   }   
 }
 
+
 .project_overlay_container{
-  position: absolute;  
+  position: absolute;
+  right:0;  
   bottom: 2vh;  
-  width: 100%;  
+  width: 95%;  
   display: flex;  
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-end;  
   font-size: 50px;
   color: gray;
   padding: 20px;

@@ -106,9 +106,7 @@ function App() {
           )}
         </div>
       </div>
-      <div className={'progress-bar'}>
 
-      </div>
       {/* progress */}
       {/* <div className={inView.project>0 ? `scroll__indi__container` : 'hidden'}>{navItems}</div> */}
     </div>
