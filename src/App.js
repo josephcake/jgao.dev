@@ -23,7 +23,8 @@ function App() {
 
   useEffect(()=>{ //setting the scrollHeight once
     const app = appRef.current
-    const height = app.scrollHeight
+    let height = app.scrollHeight
+    height = height - (height/4)
     sScrollHeight(height)
     console.log('app:',height)
   },[])
