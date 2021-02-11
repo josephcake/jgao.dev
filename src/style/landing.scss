@@ -1,3 +1,6 @@
+.main_land{
+  height: 100vh;
+}
 .landing{  
   position: relative;
   height: 100%;
@@ -7,7 +10,7 @@
   z-index: 1;
   text-align: center;
   &__section{
-    height: auto;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;

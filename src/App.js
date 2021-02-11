@@ -45,15 +45,15 @@ function App() {
     sInView(prevState)    
   }
 
-  const navItemColor = twilightTheme ? "bg-light" : "bg-dark";
-  const projects = [1, 2, 3];
-  const navItems = projects.map((p) => {
-    if (p === inView.project) {
-      return <div className={`nav__scroll_indi grow ${navItemColor}`}></div>;
-    } else {
-      return <div className={`nav__scroll_indi ${navItemColor}`}></div>;
-    }
-  });
+  // const navItemColor = twilightTheme ? "bg-light" : "bg-dark";
+  // const projects = [1, 2, 3];
+  // const navItems = projects.map((p) => {
+  //   if (p === inView.project) {
+  //     return <div className={`nav__scroll_indi grow ${navItemColor}`}></div>;
+  //   } else {
+  //     return <div className={`nav__scroll_indi ${navItemColor}`}></div>;
+  //   }
+  // });
 
   return (
     <div id={"App"}>
@@ -67,44 +67,50 @@ function App() {
         onScroll={debounce(handleScroll, 100)}
       >
         <Landing theme={twilightTheme} setTheme={sTheme} />
-        <Project
-          toggleModal={toggleModal}
-          displayModal={displayModal}
-          prjNum={1}
-          inView={inView.project}
-          first
-          theme={twilightTheme}
-          heroLight={dtd_hero_light}
-          heroDark={dtd_hero_dark}
-          subtitle={"Algo Visualizer"}
-          title={"Destroy The Duck"}
-        />
-        <Project
-          toggleModal={toggleModal}
-          displayModal={displayModal}
-          prjNum={2}
-          inView={inView.project}
-          theme={twilightTheme}
-          heroLight={m_hero_light}
-          heroDark={m_hero_dark}
-          subtitle={"Pokemon Database"}
-          title={"Mewgrounds"}
-        />
-        <Project
-          toggleModal={toggleModal}
-          displayModal={displayModal}
-          prjNum={3}
-          inView={inView.project}
-        />
-        {firstLoad ? null : (
-          <Modal
-            theme={twilightTheme}
-            displayModal={displayModal}
+        <div className={"projects"}>
+          <Project
             toggleModal={toggleModal}
+            displayModal={displayModal}
+            prjNum={1}
+            inView={inView.project}
+            first
+            theme={twilightTheme}
+            heroLight={dtd_hero_light}
+            heroDark={dtd_hero_dark}
+            subtitle={"Algo Visualizer"}
+            title={"Destroy The Duck"}
           />
-        )}
+          <Project
+            toggleModal={toggleModal}
+            displayModal={displayModal}
+            prjNum={2}
+            inView={inView.project}
+            theme={twilightTheme}
+            heroLight={m_hero_light}
+            heroDark={m_hero_dark}
+            subtitle={"Pokemon Database"}
+            title={"Mewgrounds"}
+          />
+          <Project
+            toggleModal={toggleModal}
+            displayModal={displayModal}
+            prjNum={3}
+            inView={inView.project}
+          />
+          {firstLoad ? null : (
+            <Modal
+              theme={twilightTheme}
+              displayModal={displayModal}
+              toggleModal={toggleModal}
+            />
+          )}
+        </div>
       </div>
-      <div className={inView.project>0 ? `scroll__indi__container` : 'hidden'}>{navItems}</div>
+      <div className={'progress-bar'}>
+
+      </div>
+      {/* progress */}
+      {/* <div className={inView.project>0 ? `scroll__indi__container` : 'hidden'}>{navItems}</div> */}
     </div>
   );
 }

@@ -6,11 +6,11 @@ const Sidenav = ({theme, setTheme}) =>{
     <div
       className={theme ? `bg-dark fixed__sidenav` : `bg-light fixed__sidenav`}
     >
-      <div className={"about sideText sidenav__item"}></div>
+      <div className={"about sideText sidenav__item"}> <h3></h3> </div>
+
       <div className={"about sideText sidenav__item"}>
         <h3>JG</h3>
-      </div>
-      
+      </div>      
 
       <div
         className={
@@ -20,7 +20,7 @@ const Sidenav = ({theme, setTheme}) =>{
         }
         onClick={() => setTheme(!theme)}
       >
-        {theme ? <h3>twilight</h3> : <h3>cookies & cream</h3>}
+        {theme ? <h3>twilight</h3> : <h3>creamy</h3>}
       </div>
     </div>
   );

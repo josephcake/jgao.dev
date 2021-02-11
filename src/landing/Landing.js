@@ -9,7 +9,7 @@ function Landing ({theme,setTheme}) {
     first.scrollIntoView({behavior: "smooth"})
   }  
   return (
-    <div className={"section"}>
+    <div className={"section main_land"}>
       
       <div
         className={theme ? `landing__dark landing` : `landing__light landing`}

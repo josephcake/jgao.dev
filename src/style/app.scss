@@ -9,37 +9,40 @@
   color: whitesmoke;  
   max-height: 100vh;
   height:100%;
-  overflow-y: scroll;
-  // overflow-x: hidden;
-  scroll-snap-type: mandatory; /* for older browsers */
-  scroll-snap-points-y: repeat(100vh); /* for older browsers */
-  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  // overflow-y: scroll;
+  // scroll-snap-type: mandatory; /* for older browsers */
+  // scroll-snap-points-y: repeat(100vh); /* for older browsers */
+  // scroll-snap-type: y mandatory;
 }
 .section{
   position: relative;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
   height:100vh;
+  // scroll-snap-align: center;
+  // scroll-snap-stop: always;
   // z-index: 1;
 }
-
-.scroll__indi__container{  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  position: fixed;
-  top: 45%; 
-  right:0;
-  width: 60px;
+.progress-bar{
+  
 }
 
-.nav__scroll_indi{
-  height: 4px;  
-  width: 50%;
-  margin: 7px 0;
-  transition: width 0.3s ease-in-out;  
-}
-.grow{
-  width: 80%;
-}
+// .scroll__indi__container{  
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: flex-end;
+//   position: fixed;
+//   top: 45%; 
+//   right:0;
+//   width: 60px;
+// }
+
+// .nav__scroll_indi{
+//   height: 4px;  
+//   width: 50%;
+//   margin: 7px 0;
+//   transition: width 0.3s ease-in-out;  
+// }
+// .grow{
+//   width: 80%;
+// }
