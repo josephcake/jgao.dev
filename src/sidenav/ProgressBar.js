@@ -1,28 +1,35 @@
-import React, {memo} from 'react'
-// import Bar from './Bar'
+import React, { memo } from 'react'
 
-const ProgressBar = ({scrollTop, scrollHeight}) => {
-
-  const heightPercentage = Math.round((((scrollTop/scrollHeight)*100) + Number.EPSILON)*100)/100
-  // console.log(heightPercentage)
-
+const ProgressBar = ({scrollTop, scrollHeight}) => { 
+  // console.log
+  const heightPercentage =
+    Math.round(((scrollTop / scrollHeight) * 100 + Number.EPSILON) * 100) / 100;  
   return (
-    <div className={"progress-bar"} scrollTop={scrollTop} scrollHeight={scrollHeight} style={{height:`${heightPercentage}%`}}>
+    <div className={"progress-bar"} style={{ height: `${heightPercentage}%` }}>
+      <div className={"progress-bar__inner"}></div>
+      <div className={"progress-bar__fixed-background"}></div>
+      <div className={"bars-container"}>
+        <div className={"progress-bar__edge-1 progress-bar__edge"}></div>
+        <div className={"progress-bar__edge-1 progress-bar__edge"}></div>
+        <div className={"progress-bar__edge-2 progress-bar__edge"}></div>
+        <div className={"progress-bar__edge-2 progress-bar__edge"}></div>
+        {/* <div className={"progress-bar__edge-3 progress-bar__edge"}></div>
+        <div className={"progress-bar__edge-3 progress-bar__edge"}></div>
+        <div className={"progress-bar__edge-4 progress-bar__edge"}></div>
+        <div className={"progress-bar__edge-4 progress-bar__edge"}></div>
+        <div className={"progress-bar__edge-4 progress-bar__edge"}></div>
+        <div className={"progress-bar__edge-4 progress-bar__edge"}></div>
+        <div className={"progress-bar__edge-3 progress-bar__edge"}></div>
+        <div className={"progress-bar__edge-3 progress-bar__edge"}></div> */}
+        <div className={"progress-bar__edge-2 progress-bar__edge"}></div>
+        <div className={"progress-bar__edge-2 progress-bar__edge"}></div>
+        <div className={"progress-bar__edge-1 progress-bar__edge"}></div>
+        <div className={"progress-bar__edge-1 progress-bar__edge"}></div>
+      </div>
     </div>
-    
-)}
-
-function compare(prevProp, nextProp) {
-  if(prevProp.scrollTop < 0 || prevProp == undefined){
-    return true
-  }
-  if (prevProp.scrollTop == nextProp.scrollTop) {
-    console.log(prevProp.scrollTop, nextProp.scrollTop);
-    return false;
-  }
-  return true;
-}
+  );}
 
 
-// export default memo(ProgressBar, compare)
-export default ProgressBar
+
+export default memo(ProgressBar)
+// export default ProgressBar

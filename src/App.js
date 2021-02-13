@@ -28,7 +28,7 @@ function App() {
     let height = app.scrollHeight
     height = height - (height/4)
     sScrollHeight(height)
-    console.log('app:',height)
+    // console.log('app:',height)
   },[twilightTheme])
   
 
@@ -62,10 +62,12 @@ function App() {
 
     // sInView(prevState)    setting the current project view (if snap scroll is on)
   }
-
+  console.log('app')
 
   return (
-    <div id={"App"}>
+    <div id={"App"} 
+    // onScroll={handleScroll}
+    >
       <Sidenav
         theme={twilightTheme}
         setTheme={sTheme}
@@ -108,7 +110,7 @@ function App() {
             prjNum={3}
             // inView={inView.project}
           />
-        
+
           {firstLoad ? null : (
             <Modal
               theme={twilightTheme}

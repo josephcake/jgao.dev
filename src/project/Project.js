@@ -12,7 +12,7 @@ function Project({
     subtitle, 
     title
   }) {
-    console.log('project')
+    // console.log('project')
   const zoomed = prjNum === inView ? "zoomed" : ""
   const hero = theme ? heroDark : heroLight
   const direction = displayModal ? "__left" : "__right"
