@@ -1,6 +1,6 @@
 import React, {memo} from 'react'
 
-const InnerSidenav = memo(function InnerSidenav({theme, setTheme}){
+const InnerSidenav = memo(function InnerSidenav({theme, setTheme, toggleModal, displayModal}){
   // console.log('innerSidenav')
   return (
     <div className={`fixed__sidenav`}>
@@ -8,8 +8,12 @@ const InnerSidenav = memo(function InnerSidenav({theme, setTheme}){
         <h3>高</h3>
       </div>
 
-      <div className={"about sideText sidenav__item"}>
-        <h3>JG</h3>
+      <div className={"about sideText sidenav__item"} onClick={toggleModal}>
+        {displayModal?
+        <h3>Close</h3>:
+        <h3>About Me</h3>
+        }
+        {/* <h3>résumé</h3> */}
       </div>
 
       <div

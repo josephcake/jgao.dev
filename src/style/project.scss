@@ -39,7 +39,7 @@
 }
 .modal_arrow{
   position: relative;  
-  z-index: 999999;
+  z-index: 1;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -50,6 +50,7 @@
   border-radius: 50%;   
   background-color: rgba(182, 182, 182, 0.616);
   &__left{
+    z-index: 0;
     position: fixed;
     left: 3vw;
     top: 3vh;

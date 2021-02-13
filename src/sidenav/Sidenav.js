@@ -2,7 +2,7 @@ import React from 'react'
 // import ProgressBar from './ProgressBar'
 import InnerSidenav from './InnerSidenav'
 
-const Sidenav = ({theme, setTheme, scrollTop, scrollHeight}) =>{
+const Sidenav = ({theme, setTheme, scrollTop, scrollHeight, toggleModal, displayModal}) =>{
   // console.log(scrollHeight)
   return (
     <div
@@ -13,8 +13,13 @@ const Sidenav = ({theme, setTheme, scrollTop, scrollHeight}) =>{
       }
     >
       {/* <ProgressBar scrollTop={scrollTop} scrollHeight={scrollHeight}/> */}
-      <InnerSidenav theme={theme} setTheme={setTheme}/>
-      
+
+      <InnerSidenav
+        theme={theme}
+        setTheme={setTheme}
+        toggleModal={toggleModal}
+        displayModal={displayModal}
+      />
     </div>
   );
 }

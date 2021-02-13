@@ -15,7 +15,8 @@ function Project({
     // console.log('project')
   const zoomed = prjNum === inView ? "zoomed" : ""
   const hero = theme ? heroDark : heroLight
-  const direction = displayModal ? "__left" : "__right"
+  // const direction = displayModal ? "__left" : "__right"
+  const text = theme ? 'text-light': 'text-dark'
 
   return (
     <div id={`${first ? "first" : null}`} className={`section`}>
@@ -27,14 +28,14 @@ function Project({
           ></div>
         </div>
       </div>
-      <div className={`project_overlay_container`}>
+      <div className={`project_overlay_container ${text}`}>
         <div className={""}>
           <h6>{subtitle}</h6>
           <h1>{title}</h1>
         </div>
         <div></div>
         <div
-          className={`modal_arrow${direction} modal_arrow`}
+          className={`modal_arrow__right modal_arrow`}
           onClick={()=>toggleModal()}
         >
           <svg

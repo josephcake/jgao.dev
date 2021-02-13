@@ -27,9 +27,12 @@ function App() {
     sScrollHeight(height)
     // console.log('app:',height)
   },[twilightTheme])
+
   const toggleModal = () => {
     tModal(!displayModal);
-    checkFirst(false);
+    if(firstLoad){
+      checkFirst(false);
+    }
   };
   console.log('app')
 
@@ -43,6 +46,8 @@ function App() {
         setTheme={sTheme}
         // scrollTop={scrollTop}
         scrollHeight={scrollHeight}
+        toggleModal={toggleModal}
+        displayModal={displayModal}
       />
       <div
         className={twilightTheme ? `bg-dark App` : `bg-light App`}
