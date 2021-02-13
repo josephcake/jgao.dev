@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+
 
 const Modal = ({theme, displayModal,toggleModal}) => {
   const modalTheme = theme?'modal__bg-dark':'modal__bg-light'

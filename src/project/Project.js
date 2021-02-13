@@ -35,7 +35,7 @@ function Project({
         <div></div>
         <div
           className={`modal_arrow${direction} modal_arrow`}
-          onClick={toggleModal}
+          onClick={()=>toggleModal()}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -54,12 +54,11 @@ function Project({
   );
 }
 
-function compare (prevProp, nextProp){  
-  if(prevProp.theme != nextProp.theme){
+function compare (prevProp, nextProp){    
+  if(prevProp.theme !== nextProp.theme){    
     return false
   }
-  if(prevProp.displayModal != nextProp.displayModal){
-    console.log(prevProp.displayModal, nextProp.displayModal)
+  if(prevProp.displayModal !== nextProp.displayModal){    
     return false
   }
   return true

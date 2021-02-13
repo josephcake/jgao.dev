@@ -1,12 +1,11 @@
 import React, {memo} from 'react'
 
 const InnerSidenav = memo(function InnerSidenav({theme, setTheme}){
-  console.log('innerSidenav')
+  // console.log('innerSidenav')
   return (
     <div className={`fixed__sidenav`}>
-      <div className={"about sideText sidenav__item"}>
-        {" "}
-        <h3></h3>{" "}
+      <div className={"logo sidenav__item"}>
+        <h3>高</h3>
       </div>
 
       <div className={"about sideText sidenav__item"}>
@@ -26,4 +25,5 @@ const InnerSidenav = memo(function InnerSidenav({theme, setTheme}){
     </div>
   );
 })
+
 export default InnerSidenav

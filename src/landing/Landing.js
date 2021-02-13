@@ -7,24 +7,21 @@ const Landing = memo(function Landing ({theme,setTheme}) {
   const scrollToNext = () =>{     
     let first = document.getElementById("first")    
     first.scrollIntoView({behavior: "smooth"})
-  }
-  // console.log('landing page') 
+  }  
   return (
     <div className={"section main_land"}>
       
       <div
         className={theme ? `landing__dark landing` : `landing__light landing`}
       >
-        <div className={"landing__section"}>
-          {/* <div></div> */}
+        <div className={"landing__section"}>          
           <div className={"centerText"}>
             <h1 className={"centerText__text title"}>
               <WordWrapper theme={theme} str={"Joseph.Gao"}/>
             </h1>
 
             <h6 className={"centerText__text subtitle"}>SOFTWARE ENGINEER</h6>
-          </div>
-          {/* <div></div> */}
+          </div>        
           
         </div>
         <div

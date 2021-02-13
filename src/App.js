@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
+// import {toggleModal} from './utilities/Functions'
 import './style/base.scss';
 // import {themes} from './constant/AppConstant';
 import Sidenav from './sidenav/Sidenav'
@@ -15,13 +16,9 @@ function App() {
   const [twilightTheme, sTheme] = useState(false)
   const [displayModal, tModal]  = useState(false)
   const [firstLoad, checkFirst] = useState(true)
-  const [inView, sInView]       = useState({top:0, project:0})
-
-  const [scrollTop, sScrollTop] = useState(0)
-
+  // const [inView, sInView]       = useState({top:0, project:0})
+  // const [scrollTop, sScrollTop] = useState(0)
   const [scrollHeight, sScrollHeight] = useState(0)
-  const direction = displayModal ? "__left" : "__right";
-
 
   useEffect(()=>{ //setting the scrollHeight once
     const app = appRef.current
@@ -30,54 +27,27 @@ function App() {
     sScrollHeight(height)
     // console.log('app:',height)
   },[twilightTheme])
-  
-
-  const debounce = (fn, delay) => {
-    let timeoutID;
-    return function (...args) {
-      if(timeoutID){
-        clearTimeout(timeoutID)
-      }
-      timeoutID = setTimeout(()=>{
-        fn(...args)
-      }, delay)
-    }
-  } //debounce(fn,s)
-
-  const toggleModal=()=>{
-    tModal(!displayModal)
-    checkFirst(false)
-  }
-  const handleScroll=(e)=>{
-    // console.log(e.target.scrollTop)
-    sScrollTop(e.target.scrollTop);
-
-    // let scrollTop = e.target.scrollTop    
-    // let sectionHeight = e.target.scrollHeight/4
-    // let prevState = {...inView};
-    // if(scrollTop !== inView.top){      
-    //   prevState.project = scrollTop/sectionHeight
-    //   prevState.top = scrollTop      
-    // }
-
-    // sInView(prevState)    setting the current project view (if snap scroll is on)
-  }
+  const toggleModal = () => {
+    tModal(!displayModal);
+    checkFirst(false);
+  };
   console.log('app')
 
   return (
-    <div id={"App"} 
-    // onScroll={handleScroll}
+    <div
+      id={"App"}
+      // onScroll={handleScroll}
     >
       <Sidenav
         theme={twilightTheme}
         setTheme={sTheme}
-        scrollTop={scrollTop}
+        // scrollTop={scrollTop}
         scrollHeight={scrollHeight}
       />
       <div
         className={twilightTheme ? `bg-dark App` : `bg-light App`}
         ref={appRef}
-        onScroll={handleScroll}
+        // onScroll={handleScroll}
       >
         <Landing theme={twilightTheme} setTheme={sTheme} />
         <div className={"projects"}>

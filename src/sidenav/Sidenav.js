@@ -1,5 +1,5 @@
 import React from 'react'
-import ProgressBar from './ProgressBar'
+// import ProgressBar from './ProgressBar'
 import InnerSidenav from './InnerSidenav'
 
 const Sidenav = ({theme, setTheme, scrollTop, scrollHeight}) =>{
