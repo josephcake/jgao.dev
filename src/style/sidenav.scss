@@ -19,26 +19,19 @@
 }
 .progress-bar{  
   background-color: rgb(84, 106, 129);
+  background-color: transparent;
   width: 8px;  
   // overflow-y: hidden;
   // overflow-x: auto;
   &__edge{    
     height:2px;
-    background-color: rgb(84, 106, 129);
-    
-    
+      background-color: rgb(84, 106, 129);
     &-1{      
-      width: 9px;
+      width: 30px;
+      height: 2px;
+      border-radius: 2px;
     }
-    &-2{      
-      width: 10px;
-    }
-    &-3{      
-      width: 11px;
-    }
-    &-4{      
-      width: 12px;
-    }
+   
   }
   &__inner{
     // position: absolute;
@@ -50,7 +43,8 @@
   }
   &__fixed-background{
     position: fixed;
-    background-color: rgb(84, 106, 129);
+    // background-color: rgb(84, 106, 129);
+    background-color: transparent;
     bottom:0;
     top:0;
     width: 8px; 

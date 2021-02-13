@@ -12,7 +12,7 @@ const Sidenav = ({theme, setTheme, scrollTop, scrollHeight}) =>{
           : `bg-light fixed__sidenav__container`
       }
     >
-      <ProgressBar scrollTop={scrollTop} scrollHeight={scrollHeight}/>
+      {/* <ProgressBar scrollTop={scrollTop} scrollHeight={scrollHeight}/> */}
       <InnerSidenav theme={theme} setTheme={setTheme}/>
       
     </div>
