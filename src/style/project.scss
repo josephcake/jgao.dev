@@ -78,11 +78,22 @@
 //project wrapper
 
 .project-wrapper{
+  display: block;
   height: 100vh;
+  // position: relative;
   &__img{
-    margin: auto;
+    // margin: auto;
     width: 100%;
-    display: block;
+    // display: block;
     // height: 100%;
   }
+}
+.blur-overlay{
+  // position: relative;
+  // bottom: 0;
+  transform: translateY(-100px);
+  height: 100px;
+  // width: 95vw;
+  background-color: rgba(255, 255, 255, 0.638);
+  filter: blur(8px);
 }

@@ -4,7 +4,10 @@ import mewgrounds from '../../media/mewgrounds/mewgrounds.jpg'
 const Mewgrounds = () =>{
   return(
     <div className={'project-wrapper'}>
-      <img className={'project-wrapper__img'} srcSet={mewgrounds} alt={"mewgrounds"}/>
+      <div>
+        <img className={'project-wrapper__img'} srcSet={mewgrounds} alt={"mewgrounds"}/>
+      </div>
+      <div className={'blur-overlay'}></div>
     </div>
   )
 }
