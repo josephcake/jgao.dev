@@ -6,10 +6,13 @@ import Sidenav from './sidenav/Sidenav'
 import Landing from './landing/Landing';
 import Project from './project/Project'
 import Modal from './components/Modal'
+import Mewgrounds from './project/poject-wrappers/Mewgrounds'
+
 import dtd_hero_light from './media/dtd/dtd_hero_light.gif'
 import dtd_hero_dark from './media/dtd/dtd_hero_dark.gif'
 import m_hero_light from './media/mewgrounds/m5_hero_light.gif'
 import m_hero_dark from './media/mewgrounds/m5_hero_dark.gif'
+
 
 function App() {
   const appRef = useRef(null)
@@ -91,7 +94,9 @@ function App() {
               theme={twilightTheme}
               displayModal={displayModal}
               toggleModal={toggleModal}
-            />
+            >
+              <Mewgrounds/>
+            </Modal>
           )}
         </div>
       </div>

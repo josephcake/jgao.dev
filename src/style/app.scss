@@ -5,11 +5,14 @@
 .App{
   position: absolute;
   display: flex;
+  right:0;
   flex-direction: column;
   color: whitesmoke;  
   max-height: 100vh;
+  width: 95vw;
   height:100%;
   overflow-x: hidden;
+
   // overflow-y: scroll;
   // scroll-snap-type: mandatory; /* for older browsers */
   // scroll-snap-points-y: repeat(100vh); /* for older browsers */

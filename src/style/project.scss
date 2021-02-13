@@ -72,3 +72,17 @@
   50% {transform: rotate(90deg) scale(1); background-color: rgba(135, 135, 135, 0.878);}
   100% {transform: rotate(90deg) scale(0.7); background-color: rgba(200, 200, 200, 0.616);}
 }
+
+
+
+//project wrapper
+
+.project-wrapper{
+  height: 100vh;
+  &__img{
+    margin: auto;
+    width: 100%;
+    display: block;
+    // height: 100%;
+  }
+}
