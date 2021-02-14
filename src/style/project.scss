@@ -108,20 +108,25 @@
     justify-content: space-between;
     align-items: center;
   }
-  &-image{
-
+  &-img{
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
   }
 }
 
 
 .mid-section{
   padding:50px 0;
-  width: 60%;
+  // width: 60%;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  & > img{
+    object-fit: contain;
+  }
   &_dual{
     padding:50px 0;
     width: 60%;

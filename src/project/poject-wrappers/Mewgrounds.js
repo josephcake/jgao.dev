@@ -1,8 +1,12 @@
 import React from 'react'
+import MidSection from '../../components/MidSection'
+
 import mewgrounds from '../../media/mewgrounds/mewgrounds_rotated.jpg'
 import charizard from '../../media/mewgrounds/charizard.png'
 import pokemon_stat_overall from '../../media/mewgrounds/pokemon_stat_overall.png'
+import pokemon_detail from '../../media/mewgrounds/pokemon_detail.jpg'
 import pokemon_group from '../../media/mewgrounds/pokemon_group.png'
+import pokeball from '../../media/mewgrounds/pokeball.png'
 import pokemon_level_up from '../../media/mewgrounds/pokemon_level_up.jpg'
 import pokemon_team from '../../media/mewgrounds/pokemon_team.jpg'
 
@@ -35,18 +39,15 @@ const Mewgrounds = () =>{
           </div>
         </div>
       </div>
-
-      <div className={"project-item mid-section"}>
-        <div className={""}>
-          <img className={"project-img"} srcSet={pokemon_group} alt={"pokemon_group"} />
-        </div>
-        <div className={"project-text-container"}>
-          <p className={"project-p"}>Pokemon Name</p>
-          <p className={"project-p"}>Image</p>
-          <p className={"project-p"}>Pokedex number</p>
-          <p className={"project-p"}>Primary & Secondary types</p>
-        </div>
-      </div>
+      <MidSection
+        src={pokemon_group}
+        p={[
+          "Pokemon Name",
+          "Image",
+          "Pokedex Number",
+          "Primary & Secondary types",
+        ]}
+      />
 
       <div className={"project-item mid-section_dual"}>
         <div className={""}>
@@ -59,39 +60,38 @@ const Mewgrounds = () =>{
           <p className={"project-p"}>Primary & Secondary types</p>
         </div>
       </div>
+      <MidSection
+        src={pokemon_detail}
+        p={["Some details about the above image"]}
+        expand
+      />     
+      <MidSection
+        src={pokemon_level_up}
+        p={["Some details about the above image"]}
+        // expand
+      />           
+      <MidSection
+        src={pokemon_stat_overall}
+        p={["Some details about the above image"]}
+        // expand
+      />           
 
-      <div className={"project-item mid-section expand"}>
-        <div className={""}>
-          <img
-            className={""}
-            srcSet={pokemon_level_up}
-            alt={"pokemon_level_up"}
-          />
-        </div>
-        <div className={"project-text-container"}>
-          <p className={"project-p"}>Some details about the above image</p>
-        </div>
-      </div>
-      <div className={"project-item mid-section expand"}>
-        <div className={""}>
-          <img
-            className={""}
-            srcSet={pokemon_stat_overall}
-            alt={"pokemon_stat_overall"}
-          />
-        </div>
-        <div className={"project-text-container"}>
-          <p className={"project-p"}>Some details about the above image</p>
-        </div>
-      </div>
       <div className={"project-item mid-section_dual"}>
         <div className={"project-text-container"}>
           <p className={"project-p"}>Details about the side pic</p>
-          <p className={"project-p"}>Max of 6</p>        
+          <p className={"project-p"}>Max of 6</p>
         </div>
         <div className={""}>
-          <img className={"project-img"} srcSet={pokemon_team} alt={"pokemon_team"} />
+          <img
+            className={"project-img"}
+            srcSet={pokemon_team}
+            alt={"pokemon_team"}
+          />
         </div>
+      </div>
+      <div className={"project-item"}>
+        <img className={"project-img"} srcSet={pokeball} alt={"pokeball"} />
+        <img className={"project-img"} srcSet={pokeball} alt={"pokeball"} />
       </div>
     </div>
   );
