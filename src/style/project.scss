@@ -29,7 +29,7 @@
   position: absolute;
   right:0;  
   bottom: 2vh;  
-  width: 95%;  
+  width: 97%;  
   display: flex;  
   justify-content: space-between;
   align-items: flex-end;  
@@ -81,19 +81,39 @@
   display: block;
   height: 100vh;
   // position: relative;
+  width: 97vw;
   &__img{
-    // margin: auto;
-    width: 100%;
+    object-fit: cover;
+    width: 97vw;
     // display: block;
-    // height: 100%;
+    height: 100%;
   }
 }
-.blur-overlay{
-  // position: relative;
-  // bottom: 0;
-  transform: translateY(-100px);
-  height: 100px;
-  // width: 95vw;
-  background-color: rgba(255, 255, 255, 0.638);
-  filter: blur(8px);
+.project-hero{
+  height: 50vh;
+
+}
+
+.project-info-container{
+  display: block;
+  & > div{
+    padding: 30px;
+  }
+  &__left{
+    display: block;
+  }
+  &__right{
+    display: block;
+  }
+  
+} 
+.mid-section{
+  padding:50px 0;
+}
+.project-item{
+  width: 100%;
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
