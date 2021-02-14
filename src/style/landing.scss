@@ -39,7 +39,7 @@
 }
 .title{
   display: flex;
-  font-family: 'Major Mono Display', monospace;
+  font-family: 'Major Mono Display', monospace !important;
   font-size: 5vmax;  
   &__container{    
     display: block;        

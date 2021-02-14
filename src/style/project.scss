@@ -82,7 +82,7 @@
   height: 100vh;
   // position: relative;
   width: 97vw;
-  &__img{
+  &__img{    
     object-fit: cover;
     width: 97vw;
     // display: block;
@@ -91,6 +91,9 @@
 }
 
 .project{
+  &-label{    
+    font-size: 1vmax;    
+  }
   &-hero{
     height: 50vh;
   }
@@ -115,4 +118,20 @@
   padding:50px 0;
   width: 60%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &_dual{
+    padding:50px 0;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.expand{
+  width: 100% !important;
 }
