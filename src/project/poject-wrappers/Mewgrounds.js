@@ -2,7 +2,9 @@ import React from 'react'
 import mewgrounds from '../../media/mewgrounds/mewgrounds_rotated.jpg'
 import charizard from '../../media/mewgrounds/charizard.png'
 import pokemon_stat_overall from '../../media/mewgrounds/pokemon_stat_overall.png'
+import pokemon_group from '../../media/mewgrounds/pokemon_group.png'
 import pokemon_level_up from '../../media/mewgrounds/pokemon_level_up.jpg'
+import pokemon_team from '../../media/mewgrounds/pokemon_team.jpg'
 
 const Mewgrounds = () =>{
   return (
@@ -31,6 +33,18 @@ const Mewgrounds = () =>{
           <div className={"project-details"}>
             Lorem ipsum bacon fish burger tomatoes and everything nice.
           </div>
+        </div>
+      </div>
+
+      <div className={"project-item mid-section"}>
+        <div className={""}>
+          <img className={"project-img"} srcSet={pokemon_group} alt={"pokemon_group"} />
+        </div>
+        <div className={"project-text-container"}>
+          <p className={"project-p"}>Pokemon Name</p>
+          <p className={"project-p"}>Image</p>
+          <p className={"project-p"}>Pokedex number</p>
+          <p className={"project-p"}>Primary & Secondary types</p>
         </div>
       </div>
 
@@ -68,6 +82,15 @@ const Mewgrounds = () =>{
         </div>
         <div className={"project-text-container"}>
           <p className={"project-p"}>Some details about the above image</p>
+        </div>
+      </div>
+      <div className={"project-item mid-section_dual"}>
+        <div className={"project-text-container"}>
+          <p className={"project-p"}>Details about the side pic</p>
+          <p className={"project-p"}>Max of 6</p>        
+        </div>
+        <div className={""}>
+          <img className={"project-img"} srcSet={pokemon_team} alt={"pokemon_team"} />
         </div>
       </div>
     </div>
