@@ -89,31 +89,30 @@
     height: 100%;
   }
 }
-.project-hero{
-  height: 50vh;
 
+.project{
+  &-hero{
+    height: 50vh;
+  }
+  &-info-container{    
+    & > div{
+      padding: 30px;
+    }    
+  }
+  &-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-image{
+
+  }
 }
 
-.project-info-container{
-  display: block;
-  & > div{
-    padding: 30px;
-  }
-  &__left{
-    display: block;
-  }
-  &__right{
-    display: block;
-  }
-  
-} 
+
 .mid-section{
   padding:50px 0;
-}
-.project-item{
-  width: 100%;
-  display: flex;
-  // flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 60%;
+  margin: auto;
 }
