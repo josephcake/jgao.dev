@@ -1,20 +1,21 @@
 import React from 'react'
 
-const MidSection = ({src,p,expand}) =>{
+const MidSection = ({src,p,dual,expand, reverse}) =>{
   const pArray = p.map(t => <p className={"project-p"}>{t}</p>);
+  let left = (
+    <div className={expand ? "expand" : ""}>
+      <img className={"project-img"} srcSet={src} alt={"src"} />
+    </div>
+  );
+  let right = <div className={"project-text-container"}>{pArray}</div>;
   return (
-    <div className={"project-item mid-section"}>
-      <div className={expand?'expand':''}>
-        <img
-          className={"project-img"}
-          srcSet={src}
-          alt={"src"}
-        />
-      </div>
-
-      <div className={"project-text-container"}>
-        {pArray}
-      </div>
+    <div
+      className={
+        dual ? `project-item mid-section_dual` : `project-item mid-section`
+      }
+    >
+      {reverse ? right : left}
+      {reverse ? left : right}
     </div>
   );
 }

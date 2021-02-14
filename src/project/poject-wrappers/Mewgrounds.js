@@ -48,47 +48,42 @@ const Mewgrounds = () =>{
           "Primary & Secondary types",
         ]}
       />
+      <MidSection
+        src={charizard}
+        p={[
+          "Pokemon Name",
+          "Image",
+          "Pokedex Number",
+          "Primary & Secondary types",
+        ]}
+        dual={'_dual'}
+      />
 
-      <div className={"project-item mid-section_dual"}>
-        <div className={""}>
-          <img className={"project-img"} srcSet={charizard} alt={"charizard"} />
-        </div>
-        <div className={"project-text-container"}>
-          <p className={"project-p"}>Pokemon Name</p>
-          <p className={"project-p"}>Image</p>
-          <p className={"project-p"}>Pokedex number</p>
-          <p className={"project-p"}>Primary & Secondary types</p>
-        </div>
-      </div>
       <MidSection
         src={pokemon_detail}
         p={["Some details about the above image"]}
         expand
-      />     
+      />
       <MidSection
         src={pokemon_level_up}
         p={["Some details about the above image"]}
         // expand
-      />           
+      />
       <MidSection
         src={pokemon_stat_overall}
         p={["Some details about the above image"]}
         // expand
-      />           
-
-      <div className={"project-item mid-section_dual"}>
-        <div className={"project-text-container"}>
-          <p className={"project-p"}>Details about the side pic</p>
-          <p className={"project-p"}>Max of 6</p>
-        </div>
-        <div className={""}>
-          <img
-            className={"project-img"}
-            srcSet={pokemon_team}
-            alt={"pokemon_team"}
-          />
-        </div>
-      </div>
+      />
+      <MidSection
+        src={pokemon_team}
+        p={[
+          "Details about the side pic",
+          "Max of 6",          
+        ]}
+        dual={'_dual'}
+        reverse
+      />
+      
       <div className={"project-item"}>
         <img className={"project-img"} srcSet={pokeball} alt={"pokeball"} />
         <img className={"project-img"} srcSet={pokeball} alt={"pokeball"} />
