@@ -91,6 +91,18 @@
 }
 
 .project{
+  &-banner{
+    position: absolute;
+    background-color: rgba(248, 248, 248,0.9);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+  }
+  &-link{
+    cursor: pointer;
+  }
   &-label{    
     font-size: 1vmax;    
   }

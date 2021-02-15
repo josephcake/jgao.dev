@@ -13,6 +13,10 @@ import pokemon_team from '../../media/mewgrounds/pokemon_team.jpg'
 const Mewgrounds = () =>{
   return (
     <div className={"project-wrapper"}>
+      <div className={'project-banner'}>
+        <h1>Mewgrounds</h1>
+        <h3 className={"project-link"}>Goto Project -----></h3>
+      </div>
       <div className={"project-hero project-item"}>
         <img
           className={"project-wrapper__img"}
@@ -39,6 +43,7 @@ const Mewgrounds = () =>{
           </div>
         </div>
       </div>
+
       <MidSection
         src={pokemon_group}
         p={[
