@@ -7,6 +7,7 @@ import Landing from './landing/Landing';
 import Project from './project/Project'
 import Modal from './components/Modal'
 import Mewgrounds from './project/poject-wrappers/Mewgrounds'
+import Dtd from './project/poject-wrappers/Dtd'
 
 import dtd_hero_light from './media/dtd/dtd_hero_light.gif'
 import dtd_hero_dark from './media/dtd/dtd_hero_dark.gif'
@@ -22,6 +23,7 @@ function App() {
   // const [inView, sInView]       = useState({top:0, project:0})
   // const [scrollTop, sScrollTop] = useState(0)
   const [scrollHeight, sScrollHeight] = useState(0)
+  const [project, setProject] = useState(null)
 
   useEffect(()=>{ //setting the scrollHeight once
     const app = appRef.current
@@ -31,13 +33,21 @@ function App() {
     // console.log('app:',height)
   },[twilightTheme])
 
-  const toggleModal = () => {
+  const toggleModal = (e) => {
+    console.log(e)
+    if(e === 'mewgrounds'){
+      setProject(<Mewgrounds/>)
+    }else if( e === 'dtd'){
+      setProject(<Dtd/>)
+    }else{
+      setProject(null)
+    }
     tModal(!displayModal);
     if(firstLoad){
       checkFirst(false);
     }
   };
-  console.log('app')
+  // console.log('app')
 
   return (
     <div
@@ -70,6 +80,7 @@ function App() {
             heroDark={dtd_hero_dark}
             subtitle={"Algo Visualizer"}
             title={"Destroy The Duck"}
+            prj={'dtd'}
           />
           <Project
             toggleModal={toggleModal}
@@ -81,6 +92,7 @@ function App() {
             heroDark={m_hero_dark}
             subtitle={"Pokemon Database"}
             title={"Mewgrounds"}
+            prj={'mewgrounds'}
           />
           <Project
             toggleModal={toggleModal}
@@ -95,7 +107,8 @@ function App() {
               displayModal={displayModal}
               toggleModal={toggleModal}
             >
-              <Mewgrounds/>
+              {project}
+              {/* <Mewgrounds/> */}
             </Modal>
           )}
         </div>

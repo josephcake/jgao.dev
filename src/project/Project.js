@@ -10,7 +10,8 @@ function Project({
     inView, 
     theme, 
     subtitle, 
-    title
+    title,
+    prj
   }) {
     // console.log('project')
   const zoomed = prjNum === inView ? "zoomed" : ""
@@ -36,7 +37,7 @@ function Project({
         <div></div>
         <div
           className={`modal_arrow__right modal_arrow`}
-          onClick={()=>toggleModal()}
+          onClick={()=>toggleModal(prj)}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
