@@ -35,13 +35,17 @@ function App() {
 
   const toggleModal = (e) => {
     console.log(e)
-    if(e === 'mewgrounds'){
-      setProject(<Mewgrounds/>)
-    }else if( e === 'dtd'){
-      setProject(<Dtd/>)
-    }else{
-      setProject(null)
+    switch(e){
+      case 'mewgrounds':
+        setProject(<Mewgrounds/>)
+      break;
+      case 'dtd':
+        setProject(<Dtd/>)
+      break;
+      default:
+        setProject(null)      
     }
+
     tModal(!displayModal);
     if(firstLoad){
       checkFirst(false);

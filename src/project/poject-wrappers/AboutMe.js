@@ -3,7 +3,12 @@ import MidSection from '../../components/MidSection'
 
 const AboutMe = () => {
   return(
-    <div></div>
+    <div>
+      {/* 
+        adding about me
+        copy Mewgrounds' format
+      */}
+    </div>
   )
 }
 
