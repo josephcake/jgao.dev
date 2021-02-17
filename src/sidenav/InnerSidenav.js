@@ -8,7 +8,7 @@ const InnerSidenav = memo(function InnerSidenav({theme, setTheme, toggleModal, d
         <h3>高</h3>
       </div>
 
-      <div className={"about sideText sidenav__item"} onClick={toggleModal}>
+      <div className={"about sideText sidenav__item"} onClick={()=>toggleModal("aboutme")}>
         {displayModal?
         <h3>Close</h3>:
         <h3>About Me</h3>

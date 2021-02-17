@@ -8,6 +8,7 @@ import Project from './project/Project'
 import Modal from './components/Modal'
 import Mewgrounds from './project/poject-wrappers/Mewgrounds'
 import Dtd from './project/poject-wrappers/Dtd'
+import AboutMe from './project/poject-wrappers/AboutMe'
 
 import dtd_hero_light from './media/dtd/dtd_hero_light.gif'
 import dtd_hero_dark from './media/dtd/dtd_hero_dark.gif'
@@ -41,6 +42,9 @@ function App() {
       break;
       case 'dtd':
         setProject(<Dtd/>)
+      break;
+      case 'aboutme':
+        setProject(<AboutMe/>)
       break;
       default:
         setProject(null)      
