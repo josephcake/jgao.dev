@@ -30,7 +30,7 @@ function Project({
         </div>
       </div>
       <div className={`project_overlay_container ${text}`}>
-        <div className={""}>
+        <div className={`project_text_container`}>
           <h6>{subtitle}</h6>
           <h1>{title}</h1>
         </div>

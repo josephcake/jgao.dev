@@ -2,18 +2,20 @@ import React, {useState, useEffect, useRef} from 'react';
 // import {toggleModal} from './utilities/Functions'
 import './style/base.scss';
 // import {themes} from './constant/AppConstant';
-import Sidenav from './sidenav/Sidenav'
-import Landing from './landing/Landing';
-import Project from './project/Project'
-import Modal from './components/Modal'
+import Sidenav    from './sidenav/Sidenav'
+import Landing    from './landing/Landing';
+import Project    from './project/Project'
+import Modal      from './components/Modal'
 import Mewgrounds from './project/poject-wrappers/Mewgrounds'
-import Dtd from './project/poject-wrappers/Dtd'
-import AboutMe from './project/poject-wrappers/AboutMe'
+import Dtd        from './project/poject-wrappers/Dtd'
+import AboutMe    from './project/poject-wrappers/AboutMe'
 
 import dtd_hero_light from './media/dtd/dtd_hero_light.gif'
-import dtd_hero_dark from './media/dtd/dtd_hero_dark.gif'
-import m_hero_light from './media/mewgrounds/m5_hero_light.gif'
-import m_hero_dark from './media/mewgrounds/m5_hero_dark.gif'
+import dtd_hero_dark  from './media/dtd/dtd_hero_dark.gif'
+import m_hero_light   from './media/mewgrounds/m5_hero_light.gif'
+import m_hero_dark    from './media/mewgrounds/m5_hero_dark.gif'
+import sg_hero_light   from './media/sg/sg_hero.png'
+import sg_hero_dark    from './media/sg/sg_hero.png'
 
 
 function App() {
@@ -88,7 +90,7 @@ function App() {
             heroDark={dtd_hero_dark}
             subtitle={"Algo Visualizer"}
             title={"Destroy The Duck"}
-            prj={'dtd'}
+            prj={"dtd"}
           />
           <Project
             toggleModal={toggleModal}
@@ -100,13 +102,19 @@ function App() {
             heroDark={m_hero_dark}
             subtitle={"Pokemon Database"}
             title={"Mewgrounds"}
-            prj={'mewgrounds'}
+            prj={"mewgrounds"}
           />
           <Project
             toggleModal={toggleModal}
             displayModal={displayModal}
             prjNum={3}
             // inView={inView.project}
+            theme={twilightTheme}
+            heroLight={sg_hero_light}
+            heroDark={sg_hero_dark}
+            subtitle={"SG Fan Page"}
+            title={"Studio Ghibli"}
+            prj={"sg"}
           />
 
           {firstLoad ? null : (

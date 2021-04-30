@@ -90,6 +90,12 @@
   }
 }
 
+.project_text_container{
+  & h1{
+    text-indent: -8px;
+  }
+}
+
 .project{
   &-banner{
     position: absolute;
