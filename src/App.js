@@ -20,7 +20,6 @@ import sg_hero_dark    from './media/sg/sg_hero.png'
 function App() {
   const [twilightTheme, sTheme] = useState(false)
   const [displayModal, tModal]  = useState(false)
-  const [firstLoad, checkFirst] = useState(true)
   const [project, setProject] = useState(null)
 
 
@@ -28,7 +27,7 @@ function App() {
     console.log(e)
     switch(e){
       case 'mewgrounds':
-        setProject(<Mewgrounds/>)
+        setProject(<Mewgrounds/>);
       break;
       case 'dtd':
         setProject(<Dtd/>)
@@ -45,9 +44,7 @@ function App() {
         },700)
     }
     tModal(!displayModal);
-    if(firstLoad){
-      checkFirst(false);
-    }
+    
   };
 
   return (
@@ -102,22 +99,15 @@ function App() {
             title={"Studio Ghibli"}
             prj={"sg"}
           />
-
-          {firstLoad ? null : (
-            <Modal
-              theme={twilightTheme}
-              displayModal={displayModal}
-              toggleModal={toggleModal}
-            >
-              {project}
-              {/* <Mewgrounds/> */}
-            </Modal>
-          )}
+          <Modal
+            theme={twilightTheme}
+            displayModal={displayModal}
+            toggleModal={toggleModal}
+            child={project}
+          >
+          </Modal>
         </div>
       </div>
-
-      {/* progress */}
-      {/* <div className={inView.project>0 ? `scroll__indi__container` : 'hidden'}>{navItems}</div> */}
     </div>
   );
 }

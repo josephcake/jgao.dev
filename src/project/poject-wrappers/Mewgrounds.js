@@ -65,20 +65,21 @@ const Mewgrounds = () =>{
           "Once you're inside a Pokemon card, you'll get to see much more infomation",
           "Such as the Front and Back appearances, as well as its SHINY form",
           "But most noticeably of all, its BASE STATS",
-          
         ]}
         expand
       />
       <MidSection
         src={pokemon_level_up}
-        p={["As you scroll down you'll see this section of the page shows the Pokemon's Level-Up Moveset"]}
+        p={[
+          "As you scroll down you'll see this section of the page shows the Pokemon's Level-Up Moveset",
+        ]}
         // expand
       />
       <MidSection
         src={pokemon_stat_overall}
         p={[
           "The STATS page gives you a brief overview of the BASE STATS of each Pokemon",
-          "Trainers can use this page to quickly find the Pokemons with desired BASE STATS"
+          "Trainers can use this page to quickly find the Pokemons with desired BASE STATS",
         ]}
         // expand
       />
@@ -87,16 +88,13 @@ const Mewgrounds = () =>{
         p={[
           "The TEAMS page shows the average BASE STATS of a party",
           "Traditional Pokemon rule: Max of 6 Pokemons per party",
-          "Trainers can mix & match to build their dream team"
+          "Trainers can mix & match to build their dream team",
         ]}
         dual={"_dual"}
         reverse
       />
 
-      <div className={"project-item"}>
-        <img className={"project-img"} srcSet={pokeball} alt={"pokeball"} />
-        <img className={"project-img"} srcSet={pokeball} alt={"pokeball"} />
-      </div>
+      <div className={"project-item project-footer-img__pokeball"}></div>
     </div>
   );
 }

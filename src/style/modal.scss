@@ -25,8 +25,8 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  // left: 0;
-  right: 0;
+  left: 100%;
+  // right: 150%;
   width: 97vw;
   // background-color: rgba(255, 255, 255, 0.185);
   display: flex;
@@ -34,8 +34,8 @@
   align-items: center;
   z-index: 999;  
   overflow: hidden;
-  transform: translateX(+100%);
-  -webkit-transform: translateX(+100%);
+  // transform: translateX(+100%);
+  // -webkit-transform: translateX(+100%);
 }
 
 .slide-in {
@@ -49,19 +49,21 @@
 }
     
 @keyframes slide-in {
-    100% { transform: translateX(0%); }
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
 }
 
 @-webkit-keyframes slide-in {
-    100% { -webkit-transform: translateX(0%); }
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-100%); }
 }
     
 @keyframes slide-out {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(+100%); }
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0%); }
 }
 
 @-webkit-keyframes slide-out {
-    0% { -webkit-transform: translateX(0%); }
-    100% { -webkit-transform: translateX(+100%); }
+    0% { -webkit-transform: translateX(-100%); }
+    100% { -webkit-transform: translateX(0%); }
 }
