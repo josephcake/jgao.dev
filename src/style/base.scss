@@ -7,6 +7,7 @@
 @import 'sidenav.scss';
 @import 'loading.scss';
 @import 'aboutme.scss';
+@import 'midsection.scss';
 
 html,body{
   height: 100%;
@@ -29,6 +30,8 @@ html {
   height: 100%;
   width: 100%; 
   font-family: 'Source Code Pro', monospace;
+  // font-family: 'Major Mono Display', monospace !important;
+
 }
 
 

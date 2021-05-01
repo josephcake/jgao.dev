@@ -13,7 +13,7 @@ import pokemon_team from '../../media/mewgrounds/pokemon_team.jpg'
 const Mewgrounds = () =>{
   return (
     <div className={"project-wrapper"}>
-      <div className={'project-banner'}>
+      <div className={"project-banner"}>
         <h1>Mewgrounds</h1>
         <h3 className={"project-link"}>Goto Project -----></h3>
       </div>
@@ -27,19 +27,14 @@ const Mewgrounds = () =>{
 
       <div className={"project-item mid-section_dual"}>
         <div className={"project-info-container"}>
-          <label className={"project-label"}>Title</label>
-          <div className={"project-name"}>Forever I shall Rise</div>
-          <label className={"project-label"}>Purpose</label>
-
-          <div className={"project-purpose"}>
-            To showcase some skills, or improve a service.
+          <label className={"project-label"}>A Pokemon Database</label>
+          <div className={"project-name"}>
+            Meant for all Pokemon enthusiast!
           </div>
-        </div>
-        <div className={"project-info-container"}>
-          <label className={"project-label"}>Details</label>
-
-          <div className={"project-details"}>
-            Lorem ipsum bacon fish burger tomatoes and everything nice.
+          <label className={"project-label"}>Purpose</label>
+          <div className={"project-purpose"}>
+            A graphical interfase that allows a trainer to check on stats,
+            items, and all Pokemon related info.
           </div>
         </div>
       </div>
@@ -47,48 +42,57 @@ const Mewgrounds = () =>{
       <MidSection
         src={pokemon_group}
         p={[
-          "Pokemon Name",
-          "Image",
-          "Pokedex Number",
-          "Primary & Secondary types",
+          "Pokemon are chronologically ordered by their Pokedex Number",
+          "A trainer can also filter and search by NAME or TYPES",
         ]}
       />
       <MidSection
         src={charizard}
         p={[
-          "Pokemon Name",
-          "Image",
+          "Each card shows:",
+          "Pokemon's NAME",
           "Pokedex Number",
-          "Primary & Secondary types",
+          "Primary & Secondary Types",
+          "and the Pokemon itself",
+          "With the Primary Types' color wrapping the border",
         ]}
-        dual={'_dual'}
+        dual={"_dual"}
       />
 
       <MidSection
         src={pokemon_detail}
-        p={["Some details about the above image"]}
+        p={[
+          "Once you're inside a Pokemon card, you'll get to see much more infomation",
+          "Such as the Front and Back appearances, as well as its SHINY form",
+          "But most noticeably of all, its BASE STATS",
+          
+        ]}
         expand
       />
       <MidSection
         src={pokemon_level_up}
-        p={["Some details about the above image"]}
+        p={["As you scroll down you'll see this section of the page shows the Pokemon's Level-Up Moveset"]}
         // expand
       />
       <MidSection
         src={pokemon_stat_overall}
-        p={["Some details about the above image"]}
+        p={[
+          "The STATS page gives you a brief overview of the BASE STATS of each Pokemon",
+          "Trainers can use this page to quickly find the Pokemons with desired BASE STATS"
+        ]}
         // expand
       />
       <MidSection
         src={pokemon_team}
         p={[
-          "Details about the side pic",
-          "Max of 6",          
+          "The TEAMS page shows the average BASE STATS of a party",
+          "Traditional Pokemon rule: Max of 6 Pokemons per party",
+          "Trainers can mix & match to build their dream team"
         ]}
-        dual={'_dual'}
+        dual={"_dual"}
         reverse
       />
-      
+
       <div className={"project-item"}>
         <img className={"project-img"} srcSet={pokeball} alt={"pokeball"} />
         <img className={"project-img"} srcSet={pokeball} alt={"pokeball"} />
