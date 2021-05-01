@@ -1,19 +1,24 @@
 import React, {memo} from 'react'
 
 const InnerSidenav = memo(function InnerSidenav({theme, setTheme, toggleModal, displayModal}){
-  // console.log('innerSidenav')
+  const handleToggle = () =>{
+    if(displayModal){
+      toggleModal(null)
+    }else{
+      toggleModal("aboutme")
+    }
+  }
   return (
     <div className={`fixed__sidenav`}>
       <div className={"logo sidenav__item"}>
         <h3>高</h3>
       </div>
 
-      <div className={"about sideText sidenav__item"} onClick={()=>toggleModal("aboutme")}>
+      <div className={"about sideText sidenav__item"} onClick={handleToggle}>
         {displayModal?
         <h3>Close</h3>:
         <h3>About Me</h3>
         }
-        {/* <h3>résumé</h3> */}
       </div>
 
       <div
