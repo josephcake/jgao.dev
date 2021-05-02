@@ -27,7 +27,7 @@ function App() {
     console.log(e)
     switch(e){
       case 'mewgrounds':
-        setProject(<Mewgrounds/>);
+        setProject(<Mewgrounds twilightTheme={twilightTheme}/>);
       break;
       case 'dtd':
         setProject(<Dtd/>)

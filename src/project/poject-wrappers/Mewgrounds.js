@@ -10,10 +10,11 @@ import pokeball from '../../media/mewgrounds/pokeball.png'
 import pokemon_level_up from '../../media/mewgrounds/pokemon_level_up.jpg'
 import pokemon_team from '../../media/mewgrounds/pokemon_team.jpg'
 
-const Mewgrounds = () =>{
+const Mewgrounds = ({twilightTheme}) =>{
+  console.log({twilightTheme});
   return (
     <div className={"project-wrapper"}>
-      <div className={"project-banner"}>
+      <div className={`project-banner ${twilightTheme ? "bg-dark":"bg-light"}`}>
         <h1>Mewgrounds</h1>
         <h3 className={"project-link"}>Goto Project -----></h3>
       </div>
@@ -42,7 +43,7 @@ const Mewgrounds = () =>{
       <MidSection
         src={pokemon_group}
         p={[
-          "Pokemon are chronologically ordered by their Pokedex Number",
+          "Pokemons are chronologically ordered by their Pokedex Number",
           "A trainer can also filter and search by NAME or TYPES",
         ]}
       />

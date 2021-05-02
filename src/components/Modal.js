@@ -14,6 +14,7 @@ const Modal = ({theme, displayModal,toggleModal, child}) => {
         
         {/* {prj?prj:<Loading/>} */}
         {child}
+        
       </div>
       
     </div>
