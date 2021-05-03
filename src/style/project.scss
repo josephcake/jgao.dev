@@ -87,6 +87,8 @@
   height: 100vh;
   // position: relative;
   width: 97vw;
+  color:inherit;
+  background-color:inherit;
   &__img{    
     object-fit: cover;
     width: 97vw;
@@ -109,8 +111,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 30px;
-    // color:white;
-    // background-color: rgba(33, 33, 33, 0.6);
+    color:inherit;
+    background-color:inherit;
   }
   &-link{
     cursor: pointer;
@@ -138,6 +140,7 @@
     }    
   }
   &-item{
+    // height: inherit;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -145,7 +148,9 @@
   }
   &-img{
     object-fit: contain;
-    object-position: center;   
+    object-position: center;
+    // width: 100%;
+    // height: 100%;
     @media screen and (min-width: 700px){
       width: 90vw !important;
     }

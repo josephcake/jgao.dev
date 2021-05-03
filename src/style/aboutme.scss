@@ -2,6 +2,9 @@
   // background: black;
   height: 100vh;
   width: 97vw;
+  position: fixed;
+  top:0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,19 +12,53 @@
 .profile-wrapper{
   height: 95%;
   width: 95%;
+  padding: 10px;
   // border: solid black 1px;
+}
+.profile-content{
+  // border: solid 1px black;
+  height: 90%;
+  display: flex;
+  // width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+  &__column{
+    flex-direction: column;
+  }
+  &__img{
+    display: block;
+    height: inherit;
+    width: 40%;
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: inherit;
+    width: 40%;
+    & > h1{
+      // margin: 15px 0;
+    }
+  }
 }
 .tab-container{
   display: flex;
   margin-left:10px;
   // justify-content: space-evenly;
+  border-bottom: solid 1px black;
 }
 .tab{
-  font-size: 25px;
-  border-top: solid lightgray 1px;
-  border-left: solid lightgray 1px;
-  border-right: solid lightgray 1px;
-  padding: 15px 30px;
-  border-radius: 20px 20px 0 0;
+  cursor: pointer;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 15px 0;
+  margin: 0 15px;
+}
+.selected {
+  font-weight: 800;
+}
 
+.exp-container{
+  width: inherit;
+  border: 1px solid black;
 }

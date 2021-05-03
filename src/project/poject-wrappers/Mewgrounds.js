@@ -15,7 +15,7 @@ const Mewgrounds = ({twilightTheme}) =>{
   return (
     <div className={"project-wrapper"}>
       <div
-        className={`project-banner ${twilightTheme ? "bg-dark" : "bg-light"}`}
+        className={`project-banner`}
       >
         <h1>Mewgrounds</h1>
         <h3 className={"project-link"}>
