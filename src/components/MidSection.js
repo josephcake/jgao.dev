@@ -4,7 +4,11 @@ const MidSection = ({src,p,dual,expand, reverse}) =>{
   const pArray = p.map((t,i) => <p key={i} className={`project-p mid-text${dual}`}>{t}</p>);
   let left = (
     <div className={expand ? "expand" : ""}>
-      <img className={"project-img"} srcSet={src} alt={"src"} />
+      <img
+        className={dual ? `project-img_dual` : `project-img`}
+        srcSet={src}
+        alt={"src"}
+      />
     </div>
   );
   let right = <div className={"mid-section-text-container"}>{pArray}</div>;

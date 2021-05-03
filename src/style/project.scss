@@ -30,12 +30,17 @@
   right:0;  
   bottom: 2vh;  
   width: 97%;  
+  // width: 100%;  
   display: flex;  
   justify-content: space-between;
   align-items: flex-end;  
   font-size: 50px;
   color: gray;
   padding: 20px;
+  @media screen and (min-width: 700px){
+        font-size: 40px;
+      // object-fit: contain;
+    }
 }
 .modal_arrow{
   position: relative;  
@@ -45,8 +50,8 @@
   justify-content: center;
   align-items: center;
   fill:black;
-  height: 70px;
-  width: 70px;  
+  height: 50px;
+  width: 50px;  
   border-radius: 50%;   
   background-color: rgba(182, 182, 182, 0.616);
   &__left{
@@ -131,11 +136,16 @@
   }
   &-img{
     object-fit: contain;
-    object-position: center;
-    @media screen and (min-width: 800px){
-      width: 97vw !important;
-      object-fit: cover;
+    object-position: center;   
+    @media screen and (min-width: 700px){
+      width: 90vw !important;
+      // object-fit: contain;
     }
+  }
+  &-img_dual{
+    object-fit: contain;
+    object-position: center;
+    
   }
 }
 
@@ -143,6 +153,9 @@
 
 .expand{
   width: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

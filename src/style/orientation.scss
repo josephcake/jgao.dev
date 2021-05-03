@@ -5,5 +5,24 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: darkslategray;
+  background-image: url('../media/backgrounds/orientation_background.jpeg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.orientation-overlay__content{
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  height: auto;
+  padding: 25px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  & > h1{
+    width: auto;
+    height: auto;
+    // white-space: nowrap;
+    font-size: 4vw;
+  }
 }
