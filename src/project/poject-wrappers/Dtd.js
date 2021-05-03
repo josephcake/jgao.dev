@@ -11,7 +11,11 @@ const Dtd = () => {
     <div className={"project-wrapper"}>
       <div className={"project-banner"}>
         <h1>Destroy The Duck</h1>
-        <h3 className={"project-link"}>Goto Project -----></h3>
+        <h3 className={"project-link"}>
+          <a href={"http://destroy-the-duck.herokuapp.com/"} target={"_blank"}>
+            Goto Project ----->
+          </a>
+        </h3>
       </div>
       <div className={"project-hero project-item"}>
         <img className={"project-wrapper__img"} srcSet={dtd} alt={"dtd"} />

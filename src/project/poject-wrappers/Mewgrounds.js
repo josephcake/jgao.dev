@@ -14,9 +14,13 @@ const Mewgrounds = ({twilightTheme}) =>{
   console.log({twilightTheme});
   return (
     <div className={"project-wrapper"}>
-      <div className={`project-banner ${twilightTheme ? "bg-dark":"bg-light"}`}>
+      <div
+        className={`project-banner ${twilightTheme ? "bg-dark" : "bg-light"}`}
+      >
         <h1>Mewgrounds</h1>
-        <h3 className={"project-link"}>Goto Project -----></h3>
+        <h3 className={"project-link"}>
+          <a href={"http://mewgrounds.herokuapp.com/"} target={"_blank"}>Goto Project -----></a>
+        </h3>
       </div>
       <div className={"project-hero project-item"}>
         <img
@@ -55,7 +59,6 @@ const Mewgrounds = ({twilightTheme}) =>{
           "Pokedex Number",
           "Primary & Secondary Types",
           "and the Pokemon itself",
-          "With the Primary Types' color wrapping the border",
         ]}
         dual={"_dual"}
       />
@@ -92,7 +95,6 @@ const Mewgrounds = ({twilightTheme}) =>{
           "Trainers can mix & match to build their dream team",
         ]}
         dual={"_dual"}
-        reverse
       />
 
       <div className={"project-item project-footer-img__pokeball"}></div>
