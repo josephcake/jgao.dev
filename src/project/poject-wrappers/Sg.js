@@ -57,7 +57,6 @@ const Sg = () => {
         src={sg_map}
         p={["A glimps into one of Studio Ghibli's works:", "The Ghibli Museum"]}
         dual={"_dual"}
-        reverse
       />
 
       <MidSection src={sg_vid} p={["The World of Studio Ghibli"]} />

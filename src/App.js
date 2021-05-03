@@ -1,4 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
+import useWindowDimensions from "./hooks/useWindowDimensions";
+import OrientationOverlay from './components/OrientationOverlay'
 import './style/base.scss';
 import Sidenav    from './sidenav/Sidenav'
 import Landing    from './landing/Landing';
@@ -18,48 +20,53 @@ import sg_hero_dark    from './media/sg/sg_hero.png'
 
 
 function App() {
-  const [twilightTheme, sTheme] = useState(false)
-  const [displayModal, tModal]  = useState(false)
-  const [project, setProject] = useState(null)
+  const [twilightTheme, sTheme] = useState(false);
+  const [displayModal, tModal] = useState(false);
+  const [project, setProject] = useState(null);
+  const [displayOrientationOverlay, setDisplayOrientationOverlay] = useState(false)
+  const { height, width } = useWindowDimensions();
 
-
+  // useEffect(() => {    
+  //   if(height>width){
+  //     setDisplayOrientationOverlay(true)
+  //   }
+  // }, []);
   const toggleModal = (e) => {
-    console.log(e)
-    switch(e){
-      case 'mewgrounds':
-        setProject(<Mewgrounds twilightTheme={twilightTheme}/>);
-      break;
-      case 'dtd':
-        setProject(<Dtd/>)
-      break;
-      case 'aboutme':
-        setProject(<AboutMe/>)
-      break;
-      case 'sg':
-        setProject(<Sg/>)
-      break;
+    // console.log(e);
+    switch (e) {
+      case "mewgrounds":
+        setProject(<Mewgrounds twilightTheme={twilightTheme} />);
+        break;
+      case "dtd":
+        setProject(<Dtd />);
+        break;
+      case "aboutme":
+        setProject(<AboutMe />);
+        break;
+      case "sg":
+        setProject(<Sg />);
+        break;
       default:
-        setTimeout(()=>{
-          setProject(null)      
-        },700)
+        setTimeout(() => {
+          setProject(null);
+        }, 700);
     }
     tModal(!displayModal);
-    
   };
 
   return (
-    <div
-      id={"App"}
-    >
+    <div id={"App"} on>
+      { height > width?
+        <OrientationOverlay/>
+        :null
+      }
       <Sidenav
         theme={twilightTheme}
         setTheme={sTheme}
         toggleModal={toggleModal}
         displayModal={displayModal}
       />
-      <div
-        className={twilightTheme ? `bg-dark App` : `bg-light App`}
-      >
+      <div className={twilightTheme ? `bg-dark App` : `bg-light App`}>
         <Landing theme={twilightTheme} setTheme={sTheme} />
         <div className={"projects"}>
           <Project
@@ -104,8 +111,7 @@ function App() {
             displayModal={displayModal}
             toggleModal={toggleModal}
             child={project}
-          >
-          </Modal>
+          ></Modal>
         </div>
       </div>
     </div>
