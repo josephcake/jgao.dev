@@ -24,6 +24,8 @@
   justify-content: space-evenly;
   &__column{
     flex-direction: column;
+    overflow-y: scroll;
+    height:100%
   }
   &__img{
     display: block;
@@ -38,9 +40,15 @@
     height: inherit;
     width: 40%;
     & > h1{
-      // margin: 15px 0;
+      margin: 15px 0;
+      @media screen and (min-width: 700px){
+        font-size: 22px;
+      }
     }
   }
+}
+.name{
+  font-family: 'Major Mono Display', monospace !important;
 }
 .tab-container{
   display: flex;
@@ -94,4 +102,52 @@
   &__summary{
     margin: 30px 0;
   }
+}
+
+.hello-container{
+  width: 90%;
+  height: inherit;
+  // border: solid 1px salmon;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hello{
+  &__header{
+    font-size: 100px;
+    margin-bottom: 40px;
+  }
+  &__contacts{
+    display: flex;
+    & > h2{
+      position: relative;
+      cursor: pointer;
+      margin: 10px;
+      color: cornflowerblue;
+      &:hover .copy_clipboard{
+        display: flex;
+      }
+      & > a{
+        text-decoration: none;
+        color: cornflowerblue;
+      }
+    }
+  }
+}
+
+.copy_clipboard{
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right:-35px;
+  top:0;
+  display: none;
+}
+.flash{
+  animation: blinker 1s linear;
+}
+@keyframes blinker {
+  50% {opacity: 0}
 }
