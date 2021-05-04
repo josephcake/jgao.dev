@@ -15,11 +15,15 @@ const Sg = () => {
     <div className={"project-wrapper"}>
       <div className={"project-banner"}>
         <h1>Studio Ghibli</h1>
-          <h3 className={"project-link"}>
-            <a href={"http://s-ghibli.herokuapp.com/"} target={"_blank"}>
-                Goto Project ----->
-            </a>
-          </h3>
+        <h3 className={"project-link"}>
+          <a
+            href={"http://s-ghibli.herokuapp.com/"}
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
+            Goto Project ----->
+          </a>
+        </h3>
       </div>
       <div className={"project-hero project-item"}>
         <img className={"project-wrapper__img"} srcSet={sg} alt={"sg"} />

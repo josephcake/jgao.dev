@@ -6,7 +6,6 @@ import charizard from '../../media/mewgrounds/charizard.png'
 import pokemon_stat_overall from '../../media/mewgrounds/pokemon_stat_overall.png'
 import pokemon_detail from '../../media/mewgrounds/pokemon_detail.jpg'
 import pokemon_group from '../../media/mewgrounds/pokemon_group.png'
-import pokeball from '../../media/mewgrounds/pokeball.png'
 import pokemon_level_up from '../../media/mewgrounds/pokemon_level_up.jpg'
 import pokemon_team from '../../media/mewgrounds/pokemon_team.jpg'
 
@@ -14,12 +13,16 @@ const Mewgrounds = ({twilightTheme}) =>{
   console.log({twilightTheme});
   return (
     <div className={"project-wrapper"}>
-      <div
-        className={`project-banner`}
-      >
+      <div className={`project-banner`}>
         <h1>Mewgrounds</h1>
         <h3 className={"project-link"}>
-          <a href={"http://mewgrounds.herokuapp.com/"} target={"_blank"}>Goto Project -----></a>
+          <a
+            href={"http://mewgrounds.herokuapp.com/"}
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
+            Goto Project ----->
+          </a>
         </h3>
       </div>
       <div className={"project-hero project-item"}>

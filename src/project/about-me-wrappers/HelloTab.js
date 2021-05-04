@@ -17,15 +17,22 @@ const HelloTab = () =>{
         <h2>Come say hi via</h2>
         <div className={"hello__contacts"}>
           <h2>
-            <a href={"https://www.linkedin.com/in/jocake/"} target={"_blank"}>
+            <a
+              href={"https://www.linkedin.com/in/jocake/"}
+              target={"_blank"}
+              rel={"noreferrer"}
+            >
               LinkedIn
             </a>
           </h2>
           <h2 onClick={copyText}>
-              e-mail
-              <img className={`copy_clipboard ${flash?"flash":""}`} src={copy}/>            
+            e-mail
+            <img
+              className={`copy_clipboard ${flash ? "flash" : ""}`}
+              src={copy}
+              alt={"copy!"}
+            />
           </h2>
-          
         </div>
       </div>
     </div>

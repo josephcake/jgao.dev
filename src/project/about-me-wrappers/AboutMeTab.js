@@ -5,7 +5,7 @@ import jgao from "../../media/jgao/jgao.jpg";
 const AboutMeTab = () =>{
   return (
     <div className={"profile-content"}>
-      <img className={"profile-content__img"} src={jgao} />
+      <img className={"profile-content__img"} src={jgao} alt={"me!"}/>
       <div className={"profile-content__text"}>
         <h1>
           Hi, my name is <span className={"name"}>Joseph Gao</span>. I studied Psychology in

@@ -12,7 +12,11 @@ const Dtd = () => {
       <div className={"project-banner"}>
         <h1>Destroy The Duck</h1>
         <h3 className={"project-link"}>
-          <a href={"http://destroy-the-duck.herokuapp.com/"} target={"_blank"}>
+          <a
+            href={"http://destroy-the-duck.herokuapp.com/"}
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
             Goto Project ----->
           </a>
         </h3>

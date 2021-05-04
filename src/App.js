@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState} from 'react';
 import useWindowDimensions from "./hooks/useWindowDimensions";
 import OrientationOverlay from './components/OrientationOverlay'
 import './style/base.scss';
@@ -23,7 +23,6 @@ function App() {
   const [twilightTheme, sTheme] = useState(false);
   const [displayModal, tModal] = useState(false);
   const [project, setProject] = useState(null);
-  const [displayOrientationOverlay, setDisplayOrientationOverlay] = useState(false)
   const { height, width } = useWindowDimensions();
 
   // useEffect(() => {    

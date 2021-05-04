@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from "react";
-import Loading from './Loading'
+import React from "react";
 
-const Modal = ({theme, displayModal,toggleModal, child}) => {
+const Modal = ({theme, displayModal, child}) => {
   const slider = displayModal?'slide-in':'slide-out'
   const mTheme = theme?'bg-dark':'bg-light' 
 

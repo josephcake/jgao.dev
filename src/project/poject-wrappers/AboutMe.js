@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import ExperienceCard from '../../components/ExperienceCard'
 import AboutMeTab from '../about-me-wrappers/AboutMeTab'
 import ExpTab from '../about-me-wrappers/ExpTab'
 import HelloTab from '../about-me-wrappers/HelloTab'
