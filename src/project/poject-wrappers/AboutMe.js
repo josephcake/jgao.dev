@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import ExperienceCard from '../../components/ExperienceCard'
 import AboutMeTab from '../about-me-wrappers/AboutMeTab'
 import ExpTab from '../about-me-wrappers/ExpTab'
+import Tabs from '../about-me-wrappers/Tabs'
+
 
 const AboutMe = () => {
 
@@ -12,33 +14,12 @@ const AboutMe = () => {
   return (
     <div className={"jgao"}>
       <div className={"profile-wrapper"}>
-        <div className={"tab-container"}>
-          <div
-            className={`tab ${tab === "jgao" ? "selected" : ""}`}
-            onClick={() => handleTab("jgao")}
-          >
-            About me
-          </div>
-          <div
-            className={`tab ${tab === "exp" ? "selected" : ""}`}
-            onClick={() => handleTab("exp")}
-          >
-            Experience
-          </div>
-          <div
-            className={`tab ${tab === "hello" ? "selected" : ""}`}
-            onClick={() => handleTab("hello")}
-          >
-            Say hi
-          </div>
-        </div>
+        <Tabs handleTab={handleTab} tab={tab}/>
         {tab === "jgao" ? (
           <AboutMeTab/>
-        ) : null}
-        {tab === "exp" ? (
+        ) : tab === "exp" ? (
           <ExpTab/>
-        ) : null}
-        {tab === "hello" ? (
+        ) : tab === "hello" ? (
           <div className={"profile-content"}>hello</div>
         ) : null}
       </div>
