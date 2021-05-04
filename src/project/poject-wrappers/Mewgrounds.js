@@ -9,8 +9,7 @@ import pokemon_group from '../../media/mewgrounds/pokemon_group.png'
 import pokemon_level_up from '../../media/mewgrounds/pokemon_level_up.jpg'
 import pokemon_team from '../../media/mewgrounds/pokemon_team.jpg'
 
-const Mewgrounds = ({twilightTheme}) =>{
-  console.log({twilightTheme});
+const Mewgrounds = () =>{
   return (
     <div className={"project-wrapper"}>
       <div className={`project-banner`}>

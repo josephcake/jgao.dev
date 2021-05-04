@@ -10,6 +10,15 @@
 @import 'midsection.scss';
 @import 'orientation.scss';
 
+*{
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font-family: sans-serif;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
 html,body{
   height: 100%;
   width: 100%;
@@ -32,19 +41,8 @@ html {
   width: 100%; 
   font-family: 'Source Code Pro', monospace;
   // font-family: 'Major Mono Display', monospace !important;
-
 }
 
-
-*{
-  outline: 0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  // font-family: sans-serif;
-  font-weight: 100;
-  letter-spacing: 2px;
-}
 .wrapper{
   background-color: rgba(255, 255, 255, 0);
   position: relative;

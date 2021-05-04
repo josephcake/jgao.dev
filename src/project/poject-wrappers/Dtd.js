@@ -3,7 +3,6 @@ import MidSection from '../../components/MidSection'
 import board from '../../media/dtd/dtd_main.jpg'
 import action from '../../media/dtd/dtd_action.jpg'
 import selfbuild from '../../media/dtd/dtd_selfbuild.gif'
-
 import dtd from '../../media/dtd/dtd.jpg'
 
 const Dtd = () => {

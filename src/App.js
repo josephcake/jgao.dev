@@ -23,18 +23,13 @@ function App() {
   const [twilightTheme, sTheme] = useState(false);
   const [displayModal, tModal] = useState(false);
   const [project, setProject] = useState(null);
+  const [firstLoad, setFirstLoad] = useState(true);
   const { height, width } = useWindowDimensions();
-
-  // useEffect(() => {    
-  //   if(height>width){
-  //     setDisplayOrientationOverlay(true)
-  //   }
-  // }, []);
+  
   const toggleModal = (e) => {
-    // console.log(e);
     switch (e) {
       case "mewgrounds":
-        setProject(<Mewgrounds twilightTheme={twilightTheme} />);
+        setProject(<Mewgrounds/>);
         break;
       case "dtd":
         setProject(<Dtd />);
@@ -50,15 +45,14 @@ function App() {
           setProject(null);
         }, 700);
     }
+    setFirstLoad(null)
     tModal(!displayModal);
   };
 
+
   return (
     <div id={"App"} on>
-      { height > width?
-        <OrientationOverlay/>
-        :null
-      }
+      {height > width ? <OrientationOverlay /> : null}
       <Sidenav
         theme={twilightTheme}
         setTheme={sTheme}
@@ -66,7 +60,8 @@ function App() {
         displayModal={displayModal}
       />
       <div className={twilightTheme ? `bg-dark App` : `bg-light App`}>
-        <Landing theme={twilightTheme} setTheme={sTheme} />
+        <Landing theme={twilightTheme} setTheme={sTheme} /> 
+          
         <div className={"projects"}>
           <Project
             toggleModal={toggleModal}
@@ -110,6 +105,7 @@ function App() {
             displayModal={displayModal}
             toggleModal={toggleModal}
             child={project}
+            firstLoad={firstLoad}
           ></Modal>
         </div>
       </div>
