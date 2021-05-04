@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import MidSection from '../../components/MidSection'
-import jgao from '../../media/jgao/jgao.jpg'
 import ExperienceCard from '../../components/ExperienceCard'
+import AboutMeTab from '../about-me-wrappers/AboutMeTab'
+import ExpTab from '../about-me-wrappers/ExpTab'
 
 const AboutMe = () => {
 
@@ -33,49 +33,10 @@ const AboutMe = () => {
           </div>
         </div>
         {tab === "jgao" ? (
-          <div className={"profile-content"}>
-            <img className={"profile-content__img"} src={jgao} />
-            <div className={"profile-content__text"}>
-              <h1>
-                Hi, my name is Joseph Gao. I studied Psychology in college and
-                somehow found my passion in tech.
-              </h1>
-              <h1>
-                Some of my hobbies include tennis, video games, and occasional
-                workout.
-              </h1>
-            </div>
-          </div>
+          <AboutMeTab/>
         ) : null}
         {tab === "exp" ? (
-          <div className={"profile-content__column"}>
-            <ExperienceCard
-              title={"Network Operation Engineer"}
-              companyLink={"https://rapidsos.com/"}
-              company={"RapidSOS"}
-              timeEmployed={"(Apr 2020 - Present)"}
-              summary={
-                "Working with first responders to build the emergency response data platform"
-              }
-              tasks={[
-                "Monitor, maintain and improve the architectures of current cloud services",
-                "Assist the engineering team to design and build new services with deployment, availability, and scalability in mind",
-                "Integrate and centralize multiple monitoring tools to rapidly identify the root of cause and reduce redundancy",
-              ]}
-            />
-            <ExperienceCard
-              title={"Frontend Software Engineer"}
-              companyLink={"https://www.learningeconomy.io/"}
-              company={"Learning Economy"}
-              timeEmployed={"(Aug 2019 - Apr 2020)"}
-              summary={"A Steward of the Internet of Education"}
-              tasks={[
-                "Conversion of legacy JavaScript layout over to modern React structure",
-                "Developing interactive UI and reusable components with React while maintaining brand consistency throughout the design",
-                "Work closely with the design team to create mockups, prototypes, and final-build",
-              ]}
-            />            
-          </div>
+          <ExpTab/>
         ) : null}
         {tab === "hello" ? (
           <div className={"profile-content"}>hello</div>

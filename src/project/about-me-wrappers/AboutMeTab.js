@@ -20,4 +20,4 @@ const AboutMeTab = () =>{
   );
 }
 
-export AboutMeTab
+export default AboutMeTab
