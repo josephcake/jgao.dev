@@ -13,7 +13,7 @@ const HelloTab = () =>{
   return (
     <div className={"profile-content"}>
       <div className={"hello-container"}>
-        <h1 className={"hello__header"}>Hello.</h1>
+        <h1 className={"hello__header"}>Hello</h1>
         <h2>Come say hi via</h2>
         <div className={"hello__contacts"}>
           <h2>
