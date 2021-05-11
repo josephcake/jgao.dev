@@ -67,7 +67,10 @@ const Sg = () => {
         dual={"_dual"}
       />
 
-      <MidSection src={sg_vid} p={["The World of Studio Ghibli"]} />
+      <MidSection
+        src={sg_vid}
+        p={["The World of Studio Ghibli"]}
+      />
       <div className={"project-item project-footer-img__totoro"}></div>
     </div>
   );

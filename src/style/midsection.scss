@@ -15,7 +15,6 @@
   align-items: center;
   & > img{
     object-fit: contain;
-    
   }
   &_dual{
     padding:50px 0;
@@ -26,6 +25,12 @@
     text-align: left;
     @media screen and (min-width: 800px){
       // flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      font-size: 18px;
+      flex-wrap: wrap;
+    }
+    @media screen and (-webkit-min-device-pixel-ratio:800){ //chrome mobile      
       justify-content: center;
       width: 100%;
       font-size: 18px;
