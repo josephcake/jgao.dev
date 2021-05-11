@@ -23,7 +23,7 @@ function App() {
   const [twilightTheme, sTheme] = useState(false);
   const [displayModal, tModal] = useState(false);
   const [project, setProject] = useState(null);
-  const [firstLoad, setFirstLoad] = useState(true);
+  const [firstLoad, setFirstLoad] = useState(1);
   const { height, width } = useWindowDimensions();
   
   const toggleModal = (e) => {
