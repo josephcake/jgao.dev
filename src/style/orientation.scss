@@ -5,10 +5,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../media/backgrounds/orientation_background.jpeg');
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .orientation-overlay__content{
   background-color: rgba(0,0,0,0.5);
@@ -22,7 +23,12 @@
   & > h1{
     width: auto;
     height: auto;
-    // white-space: nowrap;
-    font-size: 4vw;
+    font-size: 10vw;
+    text-align: center;
   }
+}
+.orientation-img{
+  background-image: url('../media/backgrounds/turn_device.gif');
+  width: 300px;
+  height:300px  
 }

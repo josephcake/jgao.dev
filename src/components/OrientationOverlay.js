@@ -9,6 +9,8 @@ const OrientationOverlay = () =>{
           Please turn your device horizontally
         </h1>
       </div>
+      <div className={"orientation-img"}>        
+      </div>
     </div>
   );
 }
