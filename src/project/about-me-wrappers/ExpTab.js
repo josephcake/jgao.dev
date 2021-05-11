@@ -5,17 +5,16 @@ const ExpTab = () =>{
   return (
     <div className={"profile-content__column"}>
       <ExperienceCard
-        title={"Network Operation Engineer"}
+        title={"Member Of Technical Staff"}
         companyLink={"https://rapidsos.com/"}
         company={"RapidSOS"}
         timeEmployed={"(Apr 2020 - Present)"}
-        summary={
-          "Working with first responders to build the emergency response data platform"
-        }
+        summary={"An emergency response data platform"}
         tasks={[
           "Monitor, maintain and improve the architectures of current cloud services",
           "Assist the engineering team to design and build new services with deployment, availability, and scalability in mind",
           "Integrate and centralize multiple monitoring tools to rapidly identify the root of cause and reduce redundancy",
+          "Developed reusable React and Styled-Component codes while maintaining brand consistency throughout the design",
         ]}
       />
       <ExperienceCard
